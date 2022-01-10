@@ -1,2 +1,5 @@
 # yulp-programming
-A playground for programming in yulp
+```
+npm install
+node src/example.js
+```
