@@ -1,0 +1,34 @@
+object "HelloWorldYulp" {
+  code {
+    // Goto runtime.
+    datacopy(0, dataoffset("Runtime"), datasize("Runtime"))
+    return(0, datasize("Runtime"))
+  }
+  object "Runtime" {
+    code {
+      const _calldata := 128 // leave first 4 32 byte chunks for hashing, returns etc..
+      calldatacopy(_calldata, 0, calldatasize()) // copy all calldata to memory.
+
+      switch mslice(_calldata, 4) // 4 byte calldata signature.
+
+      case sig"helloView() public view returns (string)" {
+        mstore(0, 0x20)
+
+        let length := 11
+        mstore(0x20, length)
+        mstore(0x40, "Hello World")
+
+        return(0, 0x60)
+      }
+
+      case sig"helloEvent() public" {
+        log2(0, 0, topic"event HelloWorld(address indexed caller)", caller())
+      }
+
+
+      default { require(0) } // invalid method signature.
+
+      stop() // stop execution here..
+    }
+  }
+}

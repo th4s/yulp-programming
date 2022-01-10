@@ -1,5 +1,9 @@
 # yulp-programming
-```
+```bash
 npm install
-node src/example.js
+
+# in different terminal
+npx hardhat node (in different terminal)
+
+npx hardhat run scripts/sample-script.js
 ```
