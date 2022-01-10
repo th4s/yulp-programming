@@ -1,0 +1,14 @@
+{
+  "name": "yulp-programming",
+  "version": "1.0.0",
+  "description": "Some prototyping with yulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yulp": "^0.2.3"
+  }
+}
