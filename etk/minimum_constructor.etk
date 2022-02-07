@@ -1,0 +1,9 @@
+codesize
+push1 0
+push1 0
+codecopy
+push1 13
+codesize
+sub
+push1 13
+return
