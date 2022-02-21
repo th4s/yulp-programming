@@ -1,0 +1,4731 @@
+   0:   push1 0x80 # selector("conduct_auto(uint256,uint256,uint256)")
+   2:   push1 0x40
+   4:   mstore
+   5:   callvalue
+   6:   dup1
+   7:   iszero
+   8:   push2 0x0010
+   b:   jumpi
+
+   c:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+   e:   dup1
+   f:   revert
+
+  10:   jumpdest
+  11:   pop
+  12:   push1 0x40
+  14:   mload
+  15:   push2 0x15ce
+  18:   codesize
+  19:   sub
+  1a:   dup1
+  1b:   push2 0x15ce
+  1e:   dup4
+  1f:   codecopy
+  20:   dup2
+  21:   dup2
+  22:   add
+  23:   push1 0x40
+  25:   mstore
+  26:   push1 0x20
+  28:   dup2
+  29:   lt
+  2a:   iszero
+  2b:   push2 0x0033 # selector("matchTokenOrderByAdmin_k44j(uint256[])")
+  2e:   jumpi
+
+  2f:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+  31:   dup1
+  32:   revert
+
+  33:   jumpdest
+  34:   dup2
+  35:   add
+  36:   swap1
+  37:   dup1
+  38:   dup1
+  39:   mload
+  3a:   swap1
+  3b:   push1 0x20
+  3d:   add
+  3e:   swap1
+  3f:   swap3
+  40:   swap2
+  41:   swap1
+  42:   pop
+  43:   pop
+  44:   pop
+  45:   caller
+  46:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+  48:   dup1
+  49:   dup1
+  4a:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+  4c:   shl
+  4d:   dup2
+  4e:   mstore
+  4f:   push1 0x20
+  51:   add
+  52:   swap1
+  53:   dup2
+  54:   mstore
+  55:   push1 0x20
+  57:   add
+  58:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+  5a:   keccak256
+  5b:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+  5d:   add
+  5e:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+  60:   push2 0x0100
+  63:   exp
+  64:   dup2
+  65:   sload
+  66:   dup2
+  67:   push20 0xffffffffffffffffffffffffffffffffffffffff
+  7c:   mul
+  7d:   not
+  7e:   and
+  7f:   swap1
+  80:   dup4
+  81:   push20 0xffffffffffffffffffffffffffffffffffffffff
+  96:   and
+  97:   mul
+  98:   or
+  99:   swap1
+  9a:   sstore
+  9b:   pop
+  9c:   dup1
+  9d:   push1 0x02 # selector("razor_balance(bool)")
+  9f:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+  a1:   push2 0x0100
+  a4:   exp
+  a5:   dup2
+  a6:   sload
+  a7:   dup2
+  a8:   push20 0xffffffffffffffffffffffffffffffffffffffff
+  bd:   mul
+  be:   not
+  bf:   and
+  c0:   swap1
+  c1:   dup4
+  c2:   push20 0xffffffffffffffffffffffffffffffffffffffff
+  d7:   and
+  d8:   mul
+  d9:   or
+  da:   swap1
+  db:   sstore
+  dc:   pop
+  dd:   pop
+  de:   push2 0x14e2
+  e1:   dup1
+  e2:   push2 0x00ec
+  e5:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+  e7:   codecopy
+  e8:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+  ea:   return
+
+  eb:   invalid
+
+  ec:   push1 0x80 # selector("conduct_auto(uint256,uint256,uint256)")
+  ee:   push1 0x40
+  f0:   mstore
+  f1:   callvalue
+  f2:   dup1
+  f3:   iszero
+  f4:   push2 0x0010
+  f7:   jumpi
+
+  f8:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+  fa:   dup1
+  fb:   revert
+
+  fc:   jumpdest
+  fd:   pop
+  fe:   push1 0x04
+ 100:   calldatasize
+ 101:   lt
+ 102:   push2 0x00cf
+ 105:   jumpi
+
+ 106:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 108:   calldataload
+ 109:   push1 0xe0
+ 10b:   shr
+ 10c:   dup1
+ 10d:   push4 0x5b0fc9c3 # selector("setOwner(bytes32,address)")
+ 112:   gt
+ 113:   push2 0x008c
+ 116:   jumpi
+
+ 117:   dup1
+ 118:   push4 0xb83f8663 # selector("old()")
+ 11d:   gt
+ 11e:   push2 0x0066
+ 121:   jumpi
+
+ 122:   dup1
+ 123:   push4 0xb83f8663 # selector("old()")
+ 128:   eq
+ 129:   push2 0x042c
+ 12c:   jumpi
+
+ 12d:   dup1
+ 12e:   push4 0xcf408823 # selector("setRecord(bytes32,address,address,uint64)")
+ 133:   eq
+ 134:   push2 0x0476
+ 137:   jumpi
+
+ 138:   dup1
+ 139:   push4 0xe985e9c5 # selector("isApprovedForAll(address,address)")
+ 13e:   eq
+ 13f:   push2 0x04f8
+ 142:   jumpi
+
+ 143:   dup1
+ 144:   push4 0xf79fe538 # selector("recordExists(bytes32)")
+ 149:   eq
+ 14a:   push2 0x0574
+ 14d:   jumpi
+
+ 14e:   push2 0x00cf
+ 151:   jump
+
+ 152:   jumpdest
+ 153:   dup1
+ 154:   push4 0x5b0fc9c3 # selector("setOwner(bytes32,address)")
+ 159:   eq
+ 15a:   push2 0x0302
+ 15d:   jumpi
+
+ 15e:   dup1
+ 15f:   push4 0x5ef2c7f0 # selector("setSubnodeRecord(bytes32,bytes32,address,address,uint64)")
+ 164:   eq
+ 165:   push2 0x0350
+ 168:   jumpi
+
+ 169:   dup1
+ 16a:   push4 0xa22cb465 # selector("setApprovalForAll(address,bool)")
+ 16f:   eq
+ 170:   push2 0x03dc
+ 173:   jumpi
+
+ 174:   push2 0x00cf
+ 177:   jump
+
+ 178:   jumpdest
+ 179:   dup1
+ 17a:   push4 0x0178b8bf # selector("resolver(bytes32)")
+ 17f:   eq
+ 180:   push2 0x00d4
+ 183:   jumpi
+
+ 184:   dup1
+ 185:   push4 0x02571be3 # selector("owner(bytes32)")
+ 18a:   eq
+ 18b:   push2 0x0142
+ 18e:   jumpi
+
+ 18f:   dup1
+ 190:   push4 0x06ab5923 # selector("setSubnodeOwner(bytes32,bytes32,address)")
+ 195:   eq
+ 196:   push2 0x01b0
+ 199:   jumpi
+
+ 19a:   dup1
+ 19b:   push4 0x14ab9038 # selector("setTTL(bytes32,uint64)")
+ 1a0:   eq
+ 1a1:   push2 0x021c
+ 1a4:   jumpi
+
+ 1a5:   dup1
+ 1a6:   push4 0x16a25cbd # selector("ttl(bytes32)")
+ 1ab:   eq
+ 1ac:   push2 0x025e
+ 1af:   jumpi
+
+ 1b0:   dup1
+ 1b1:   push4 0x1896f70a # selector("setResolver(bytes32,address)")
+ 1b6:   eq
+ 1b7:   push2 0x02b4
+ 1ba:   jumpi
+
+ 1bb:   jumpdest
+ 1bc:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 1be:   dup1
+ 1bf:   revert
+
+ 1c0:   jumpdest
+ 1c1:   push2 0x0100
+ 1c4:   push1 0x04
+ 1c6:   dup1
+ 1c7:   calldatasize
+ 1c8:   sub
+ 1c9:   push1 0x20
+ 1cb:   dup2
+ 1cc:   lt
+ 1cd:   iszero
+ 1ce:   push2 0x00ea
+ 1d1:   jumpi
+
+ 1d2:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 1d4:   dup1
+ 1d5:   revert
+
+ 1d6:   jumpdest
+ 1d7:   dup2
+ 1d8:   add
+ 1d9:   swap1
+ 1da:   dup1
+ 1db:   dup1
+ 1dc:   calldataload
+ 1dd:   swap1
+ 1de:   push1 0x20
+ 1e0:   add
+ 1e1:   swap1
+ 1e2:   swap3
+ 1e3:   swap2
+ 1e4:   swap1
+ 1e5:   pop
+ 1e6:   pop
+ 1e7:   pop
+ 1e8:   push2 0x05ba
+ 1eb:   jump
+
+ 1ec:   jumpdest
+ 1ed:   push1 0x40
+ 1ef:   mload
+ 1f0:   dup1
+ 1f1:   dup3
+ 1f2:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 207:   and
+ 208:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 21d:   and
+ 21e:   dup2
+ 21f:   mstore
+ 220:   push1 0x20
+ 222:   add
+ 223:   swap2
+ 224:   pop
+ 225:   pop
+ 226:   push1 0x40
+ 228:   mload
+ 229:   dup1
+ 22a:   swap2
+ 22b:   sub
+ 22c:   swap1
+ 22d:   return
+
+ 22e:   jumpdest
+ 22f:   push2 0x016e
+ 232:   push1 0x04
+ 234:   dup1
+ 235:   calldatasize
+ 236:   sub
+ 237:   push1 0x20
+ 239:   dup2
+ 23a:   lt
+ 23b:   iszero
+ 23c:   push2 0x0158
+ 23f:   jumpi
+
+ 240:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 242:   dup1
+ 243:   revert
+
+ 244:   jumpdest
+ 245:   dup2
+ 246:   add
+ 247:   swap1
+ 248:   dup1
+ 249:   dup1
+ 24a:   calldataload
+ 24b:   swap1
+ 24c:   push1 0x20
+ 24e:   add
+ 24f:   swap1
+ 250:   swap3
+ 251:   swap2
+ 252:   swap1
+ 253:   pop
+ 254:   pop
+ 255:   pop
+ 256:   push2 0x068f
+ 259:   jump
+
+ 25a:   jumpdest
+ 25b:   push1 0x40
+ 25d:   mload
+ 25e:   dup1
+ 25f:   dup3
+ 260:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 275:   and
+ 276:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 28b:   and
+ 28c:   dup2
+ 28d:   mstore
+ 28e:   push1 0x20
+ 290:   add
+ 291:   swap2
+ 292:   pop
+ 293:   pop
+ 294:   push1 0x40
+ 296:   mload
+ 297:   dup1
+ 298:   swap2
+ 299:   sub
+ 29a:   swap1
+ 29b:   return
+
+ 29c:   jumpdest
+ 29d:   push2 0x0206
+ 2a0:   push1 0x04
+ 2a2:   dup1
+ 2a3:   calldatasize
+ 2a4:   sub
+ 2a5:   push1 0x60
+ 2a7:   dup2
+ 2a8:   lt
+ 2a9:   iszero
+ 2aa:   push2 0x01c6
+ 2ad:   jumpi
+
+ 2ae:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 2b0:   dup1
+ 2b1:   revert
+
+ 2b2:   jumpdest
+ 2b3:   dup2
+ 2b4:   add
+ 2b5:   swap1
+ 2b6:   dup1
+ 2b7:   dup1
+ 2b8:   calldataload
+ 2b9:   swap1
+ 2ba:   push1 0x20
+ 2bc:   add
+ 2bd:   swap1
+ 2be:   swap3
+ 2bf:   swap2
+ 2c0:   swap1
+ 2c1:   dup1
+ 2c2:   calldataload
+ 2c3:   swap1
+ 2c4:   push1 0x20
+ 2c6:   add
+ 2c7:   swap1
+ 2c8:   swap3
+ 2c9:   swap2
+ 2ca:   swap1
+ 2cb:   dup1
+ 2cc:   calldataload
+ 2cd:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 2e2:   and
+ 2e3:   swap1
+ 2e4:   push1 0x20
+ 2e6:   add
+ 2e7:   swap1
+ 2e8:   swap3
+ 2e9:   swap2
+ 2ea:   swap1
+ 2eb:   pop
+ 2ec:   pop
+ 2ed:   pop
+ 2ee:   push2 0x0764
+ 2f1:   jump
+
+ 2f2:   jumpdest
+ 2f3:   push1 0x40
+ 2f5:   mload
+ 2f6:   dup1
+ 2f7:   dup3
+ 2f8:   dup2
+ 2f9:   mstore
+ 2fa:   push1 0x20
+ 2fc:   add
+ 2fd:   swap2
+ 2fe:   pop
+ 2ff:   pop
+ 300:   push1 0x40
+ 302:   mload
+ 303:   dup1
+ 304:   swap2
+ 305:   sub
+ 306:   swap1
+ 307:   return
+
+ 308:   jumpdest
+ 309:   push2 0x025c
+ 30c:   push1 0x04
+ 30e:   dup1
+ 30f:   calldatasize
+ 310:   sub
+ 311:   push1 0x40
+ 313:   dup2
+ 314:   lt
+ 315:   iszero
+ 316:   push2 0x0232
+ 319:   jumpi
+
+ 31a:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 31c:   dup1
+ 31d:   revert
+
+ 31e:   jumpdest
+ 31f:   dup2
+ 320:   add
+ 321:   swap1
+ 322:   dup1
+ 323:   dup1
+ 324:   calldataload
+ 325:   swap1
+ 326:   push1 0x20
+ 328:   add
+ 329:   swap1
+ 32a:   swap3
+ 32b:   swap2
+ 32c:   swap1
+ 32d:   dup1
+ 32e:   calldataload
+ 32f:   push8 0xffffffffffffffff
+ 338:   and
+ 339:   swap1
+ 33a:   push1 0x20
+ 33c:   add
+ 33d:   swap1
+ 33e:   swap3
+ 33f:   swap2
+ 340:   swap1
+ 341:   pop
+ 342:   pop
+ 343:   pop
+ 344:   push2 0x0919
+ 347:   jump
+
+ 348:   jumpdest
+ 349:   stop
+
+ 34a:   jumpdest
+ 34b:   push2 0x028a
+ 34e:   push1 0x04
+ 350:   dup1
+ 351:   calldatasize
+ 352:   sub
+ 353:   push1 0x20
+ 355:   dup2
+ 356:   lt
+ 357:   iszero
+ 358:   push2 0x0274
+ 35b:   jumpi
+
+ 35c:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 35e:   dup1
+ 35f:   revert
+
+ 360:   jumpdest
+ 361:   dup2
+ 362:   add
+ 363:   swap1
+ 364:   dup1
+ 365:   dup1
+ 366:   calldataload
+ 367:   swap1
+ 368:   push1 0x20
+ 36a:   add
+ 36b:   swap1
+ 36c:   swap3
+ 36d:   swap2
+ 36e:   swap1
+ 36f:   pop
+ 370:   pop
+ 371:   pop
+ 372:   push2 0x0aab
+ 375:   jump
+
+ 376:   jumpdest
+ 377:   push1 0x40
+ 379:   mload
+ 37a:   dup1
+ 37b:   dup3
+ 37c:   push8 0xffffffffffffffff
+ 385:   and
+ 386:   push8 0xffffffffffffffff
+ 38f:   and
+ 390:   dup2
+ 391:   mstore
+ 392:   push1 0x20
+ 394:   add
+ 395:   swap2
+ 396:   pop
+ 397:   pop
+ 398:   push1 0x40
+ 39a:   mload
+ 39b:   dup1
+ 39c:   swap2
+ 39d:   sub
+ 39e:   swap1
+ 39f:   return
+
+ 3a0:   jumpdest
+ 3a1:   push2 0x0300
+ 3a4:   push1 0x04
+ 3a6:   dup1
+ 3a7:   calldatasize
+ 3a8:   sub
+ 3a9:   push1 0x40
+ 3ab:   dup2
+ 3ac:   lt
+ 3ad:   iszero
+ 3ae:   push2 0x02ca
+ 3b1:   jumpi
+
+ 3b2:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 3b4:   dup1
+ 3b5:   revert
+
+ 3b6:   jumpdest
+ 3b7:   dup2
+ 3b8:   add
+ 3b9:   swap1
+ 3ba:   dup1
+ 3bb:   dup1
+ 3bc:   calldataload
+ 3bd:   swap1
+ 3be:   push1 0x20
+ 3c0:   add
+ 3c1:   swap1
+ 3c2:   swap3
+ 3c3:   swap2
+ 3c4:   swap1
+ 3c5:   dup1
+ 3c6:   calldataload
+ 3c7:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 3dc:   and
+ 3dd:   swap1
+ 3de:   push1 0x20
+ 3e0:   add
+ 3e1:   swap1
+ 3e2:   swap3
+ 3e3:   swap2
+ 3e4:   swap1
+ 3e5:   pop
+ 3e6:   pop
+ 3e7:   pop
+ 3e8:   push2 0x0b80
+ 3eb:   jump
+
+ 3ec:   jumpdest
+ 3ed:   stop
+
+ 3ee:   jumpdest
+ 3ef:   push2 0x034e
+ 3f2:   push1 0x04
+ 3f4:   dup1
+ 3f5:   calldatasize
+ 3f6:   sub
+ 3f7:   push1 0x40
+ 3f9:   dup2
+ 3fa:   lt
+ 3fb:   iszero
+ 3fc:   push2 0x0318
+ 3ff:   jumpi
+
+ 400:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 402:   dup1
+ 403:   revert
+
+ 404:   jumpdest
+ 405:   dup2
+ 406:   add
+ 407:   swap1
+ 408:   dup1
+ 409:   dup1
+ 40a:   calldataload
+ 40b:   swap1
+ 40c:   push1 0x20
+ 40e:   add
+ 40f:   swap1
+ 410:   swap3
+ 411:   swap2
+ 412:   swap1
+ 413:   dup1
+ 414:   calldataload
+ 415:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 42a:   and
+ 42b:   swap1
+ 42c:   push1 0x20
+ 42e:   add
+ 42f:   swap1
+ 430:   swap3
+ 431:   swap2
+ 432:   swap1
+ 433:   pop
+ 434:   pop
+ 435:   pop
+ 436:   push2 0x0d42
+ 439:   jump
+
+ 43a:   jumpdest
+ 43b:   stop
+
+ 43c:   jumpdest
+ 43d:   push2 0x03da
+ 440:   push1 0x04
+ 442:   dup1
+ 443:   calldatasize
+ 444:   sub
+ 445:   push1 0xa0 # selector("tree_stream(bytes,bytes)")
+ 447:   dup2
+ 448:   lt
+ 449:   iszero
+ 44a:   push2 0x0366
+ 44d:   jumpi
+
+ 44e:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 450:   dup1
+ 451:   revert
+
+ 452:   jumpdest
+ 453:   dup2
+ 454:   add
+ 455:   swap1
+ 456:   dup1
+ 457:   dup1
+ 458:   calldataload
+ 459:   swap1
+ 45a:   push1 0x20
+ 45c:   add
+ 45d:   swap1
+ 45e:   swap3
+ 45f:   swap2
+ 460:   swap1
+ 461:   dup1
+ 462:   calldataload
+ 463:   swap1
+ 464:   push1 0x20
+ 466:   add
+ 467:   swap1
+ 468:   swap3
+ 469:   swap2
+ 46a:   swap1
+ 46b:   dup1
+ 46c:   calldataload
+ 46d:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 482:   and
+ 483:   swap1
+ 484:   push1 0x20
+ 486:   add
+ 487:   swap1
+ 488:   swap3
+ 489:   swap2
+ 48a:   swap1
+ 48b:   dup1
+ 48c:   calldataload
+ 48d:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 4a2:   and
+ 4a3:   swap1
+ 4a4:   push1 0x20
+ 4a6:   add
+ 4a7:   swap1
+ 4a8:   swap3
+ 4a9:   swap2
+ 4aa:   swap1
+ 4ab:   dup1
+ 4ac:   calldataload
+ 4ad:   push8 0xffffffffffffffff
+ 4b6:   and
+ 4b7:   swap1
+ 4b8:   push1 0x20
+ 4ba:   add
+ 4bb:   swap1
+ 4bc:   swap3
+ 4bd:   swap2
+ 4be:   swap1
+ 4bf:   pop
+ 4c0:   pop
+ 4c1:   pop
+ 4c2:   push2 0x0eba
+ 4c5:   jump
+
+ 4c6:   jumpdest
+ 4c7:   stop
+
+ 4c8:   jumpdest
+ 4c9:   push2 0x042a
+ 4cc:   push1 0x04
+ 4ce:   dup1
+ 4cf:   calldatasize
+ 4d0:   sub
+ 4d1:   push1 0x40
+ 4d3:   dup2
+ 4d4:   lt
+ 4d5:   iszero
+ 4d6:   push2 0x03f2
+ 4d9:   jumpi
+
+ 4da:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 4dc:   dup1
+ 4dd:   revert
+
+ 4de:   jumpdest
+ 4df:   dup2
+ 4e0:   add
+ 4e1:   swap1
+ 4e2:   dup1
+ 4e3:   dup1
+ 4e4:   calldataload
+ 4e5:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 4fa:   and
+ 4fb:   swap1
+ 4fc:   push1 0x20
+ 4fe:   add
+ 4ff:   swap1
+ 500:   swap3
+ 501:   swap2
+ 502:   swap1
+ 503:   dup1
+ 504:   calldataload
+ 505:   iszero
+ 506:   iszero
+ 507:   swap1
+ 508:   push1 0x20
+ 50a:   add
+ 50b:   swap1
+ 50c:   swap3
+ 50d:   swap2
+ 50e:   swap1
+ 50f:   pop
+ 510:   pop
+ 511:   pop
+ 512:   push2 0x0edc
+ 515:   jump
+
+ 516:   jumpdest
+ 517:   stop
+
+ 518:   jumpdest
+ 519:   push2 0x0434
+ 51c:   push2 0x0fdd
+ 51f:   jump
+
+ 520:   jumpdest
+ 521:   push1 0x40
+ 523:   mload
+ 524:   dup1
+ 525:   dup3
+ 526:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 53b:   and
+ 53c:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 551:   and
+ 552:   dup2
+ 553:   mstore
+ 554:   push1 0x20
+ 556:   add
+ 557:   swap2
+ 558:   pop
+ 559:   pop
+ 55a:   push1 0x40
+ 55c:   mload
+ 55d:   dup1
+ 55e:   swap2
+ 55f:   sub
+ 560:   swap1
+ 561:   return
+
+ 562:   jumpdest
+ 563:   push2 0x04f6
+ 566:   push1 0x04
+ 568:   dup1
+ 569:   calldatasize
+ 56a:   sub
+ 56b:   push1 0x80 # selector("conduct_auto(uint256,uint256,uint256)")
+ 56d:   dup2
+ 56e:   lt
+ 56f:   iszero
+ 570:   push2 0x048c
+ 573:   jumpi
+
+ 574:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 576:   dup1
+ 577:   revert
+
+ 578:   jumpdest
+ 579:   dup2
+ 57a:   add
+ 57b:   swap1
+ 57c:   dup1
+ 57d:   dup1
+ 57e:   calldataload
+ 57f:   swap1
+ 580:   push1 0x20
+ 582:   add
+ 583:   swap1
+ 584:   swap3
+ 585:   swap2
+ 586:   swap1
+ 587:   dup1
+ 588:   calldataload
+ 589:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 59e:   and
+ 59f:   swap1
+ 5a0:   push1 0x20
+ 5a2:   add
+ 5a3:   swap1
+ 5a4:   swap3
+ 5a5:   swap2
+ 5a6:   swap1
+ 5a7:   dup1
+ 5a8:   calldataload
+ 5a9:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 5be:   and
+ 5bf:   swap1
+ 5c0:   push1 0x20
+ 5c2:   add
+ 5c3:   swap1
+ 5c4:   swap3
+ 5c5:   swap2
+ 5c6:   swap1
+ 5c7:   dup1
+ 5c8:   calldataload
+ 5c9:   push8 0xffffffffffffffff
+ 5d2:   and
+ 5d3:   swap1
+ 5d4:   push1 0x20
+ 5d6:   add
+ 5d7:   swap1
+ 5d8:   swap3
+ 5d9:   swap2
+ 5da:   swap1
+ 5db:   pop
+ 5dc:   pop
+ 5dd:   pop
+ 5de:   push2 0x1003
+ 5e1:   jump
+
+ 5e2:   jumpdest
+ 5e3:   stop
+
+ 5e4:   jumpdest
+ 5e5:   push2 0x055a
+ 5e8:   push1 0x04
+ 5ea:   dup1
+ 5eb:   calldatasize
+ 5ec:   sub
+ 5ed:   push1 0x40
+ 5ef:   dup2
+ 5f0:   lt
+ 5f1:   iszero
+ 5f2:   push2 0x050e
+ 5f5:   jumpi
+
+ 5f6:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 5f8:   dup1
+ 5f9:   revert
+
+ 5fa:   jumpdest
+ 5fb:   dup2
+ 5fc:   add
+ 5fd:   swap1
+ 5fe:   dup1
+ 5ff:   dup1
+ 600:   calldataload
+ 601:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 616:   and
+ 617:   swap1
+ 618:   push1 0x20
+ 61a:   add
+ 61b:   swap1
+ 61c:   swap3
+ 61d:   swap2
+ 61e:   swap1
+ 61f:   dup1
+ 620:   calldataload
+ 621:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 636:   and
+ 637:   swap1
+ 638:   push1 0x20
+ 63a:   add
+ 63b:   swap1
+ 63c:   swap3
+ 63d:   swap2
+ 63e:   swap1
+ 63f:   pop
+ 640:   pop
+ 641:   pop
+ 642:   push2 0x101e
+ 645:   jump
+
+ 646:   jumpdest
+ 647:   push1 0x40
+ 649:   mload
+ 64a:   dup1
+ 64b:   dup3
+ 64c:   iszero
+ 64d:   iszero
+ 64e:   iszero
+ 64f:   iszero
+ 650:   dup2
+ 651:   mstore
+ 652:   push1 0x20
+ 654:   add
+ 655:   swap2
+ 656:   pop
+ 657:   pop
+ 658:   push1 0x40
+ 65a:   mload
+ 65b:   dup1
+ 65c:   swap2
+ 65d:   sub
+ 65e:   swap1
+ 65f:   return
+
+ 660:   jumpdest
+ 661:   push2 0x05a0
+ 664:   push1 0x04
+ 666:   dup1
+ 667:   calldatasize
+ 668:   sub
+ 669:   push1 0x20
+ 66b:   dup2
+ 66c:   lt
+ 66d:   iszero
+ 66e:   push2 0x058a
+ 671:   jumpi
+
+ 672:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 674:   dup1
+ 675:   revert
+
+ 676:   jumpdest
+ 677:   dup2
+ 678:   add
+ 679:   swap1
+ 67a:   dup1
+ 67b:   dup1
+ 67c:   calldataload
+ 67d:   swap1
+ 67e:   push1 0x20
+ 680:   add
+ 681:   swap1
+ 682:   swap3
+ 683:   swap2
+ 684:   swap1
+ 685:   pop
+ 686:   pop
+ 687:   pop
+ 688:   push2 0x10b2
+ 68b:   jump
+
+ 68c:   jumpdest
+ 68d:   push1 0x40
+ 68f:   mload
+ 690:   dup1
+ 691:   dup3
+ 692:   iszero
+ 693:   iszero
+ 694:   iszero
+ 695:   iszero
+ 696:   dup2
+ 697:   mstore
+ 698:   push1 0x20
+ 69a:   add
+ 69b:   swap2
+ 69c:   pop
+ 69d:   pop
+ 69e:   push1 0x40
+ 6a0:   mload
+ 6a1:   dup1
+ 6a2:   swap2
+ 6a3:   sub
+ 6a4:   swap1
+ 6a5:   return
+
+ 6a6:   jumpdest
+ 6a7:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 6a9:   push2 0x05c5
+ 6ac:   dup3
+ 6ad:   push2 0x10b2
+ 6b0:   jump
+
+ 6b1:   jumpdest
+ 6b2:   push2 0x067e
+ 6b5:   jumpi
+
+ 6b6:   push1 0x02 # selector("razor_balance(bool)")
+ 6b8:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 6ba:   swap1
+ 6bb:   sload
+ 6bc:   swap1
+ 6bd:   push2 0x0100
+ 6c0:   exp
+ 6c1:   swap1
+ 6c2:   div
+ 6c3:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 6d8:   and
+ 6d9:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 6ee:   and
+ 6ef:   push4 0x0178b8bf # selector("resolver(bytes32)")
+ 6f4:   dup4
+ 6f5:   push1 0x40
+ 6f7:   mload
+ 6f8:   dup3
+ 6f9:   push4 0xffffffff # selector("test266151307()")
+ 6fe:   and
+ 6ff:   push1 0xe0
+ 701:   shl
+ 702:   dup2
+ 703:   mstore
+ 704:   push1 0x04
+ 706:   add
+ 707:   dup1
+ 708:   dup3
+ 709:   dup2
+ 70a:   mstore
+ 70b:   push1 0x20
+ 70d:   add
+ 70e:   swap2
+ 70f:   pop
+ 710:   pop
+ 711:   push1 0x20
+ 713:   push1 0x40
+ 715:   mload
+ 716:   dup1
+ 717:   dup4
+ 718:   sub
+ 719:   dup2
+ 71a:   dup7
+ 71b:   dup1
+ 71c:   extcodesize
+ 71d:   iszero
+ 71e:   dup1
+ 71f:   iszero
+ 720:   push2 0x063c
+ 723:   jumpi
+
+ 724:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 726:   dup1
+ 727:   revert
+
+ 728:   jumpdest
+ 729:   pop
+ 72a:   gas
+ 72b:   staticcall
+ 72c:   iszero
+ 72d:   dup1
+ 72e:   iszero
+ 72f:   push2 0x0650
+ 732:   jumpi
+
+ 733:   returndatasize
+ 734:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 736:   dup1
+ 737:   returndatacopy
+ 738:   returndatasize
+ 739:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 73b:   revert
+
+ 73c:   jumpdest
+ 73d:   pop
+ 73e:   pop
+ 73f:   pop
+ 740:   pop
+ 741:   push1 0x40
+ 743:   mload
+ 744:   returndatasize
+ 745:   push1 0x20
+ 747:   dup2
+ 748:   lt
+ 749:   iszero
+ 74a:   push2 0x0666
+ 74d:   jumpi
+
+ 74e:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 750:   dup1
+ 751:   revert
+
+ 752:   jumpdest
+ 753:   dup2
+ 754:   add
+ 755:   swap1
+ 756:   dup1
+ 757:   dup1
+ 758:   mload
+ 759:   swap1
+ 75a:   push1 0x20
+ 75c:   add
+ 75d:   swap1
+ 75e:   swap3
+ 75f:   swap2
+ 760:   swap1
+ 761:   pop
+ 762:   pop
+ 763:   pop
+ 764:   swap1
+ 765:   pop
+ 766:   push2 0x068a
+ 769:   jump
+
+ 76a:   jumpdest
+ 76b:   push2 0x0687
+ 76e:   dup3
+ 76f:   push2 0x1120
+ 772:   jump
+
+ 773:   jumpdest
+ 774:   swap1
+ 775:   pop
+
+ 776:   jumpdest
+ 777:   swap2
+ 778:   swap1
+ 779:   pop
+ 77a:   jump
+
+ 77b:   jumpdest
+ 77c:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 77e:   push2 0x069a
+ 781:   dup3
+ 782:   push2 0x10b2
+ 785:   jump
+
+ 786:   jumpdest
+ 787:   push2 0x0753
+ 78a:   jumpi
+
+ 78b:   push1 0x02 # selector("razor_balance(bool)")
+ 78d:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 78f:   swap1
+ 790:   sload
+ 791:   swap1
+ 792:   push2 0x0100
+ 795:   exp
+ 796:   swap1
+ 797:   div
+ 798:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 7ad:   and
+ 7ae:   push20 0xffffffffffffffffffffffffffffffffffffffff
+ 7c3:   and
+ 7c4:   push4 0x02571be3 # selector("owner(bytes32)")
+ 7c9:   dup4
+ 7ca:   push1 0x40
+ 7cc:   mload
+ 7cd:   dup3
+ 7ce:   push4 0xffffffff # selector("test266151307()")
+ 7d3:   and
+ 7d4:   push1 0xe0
+ 7d6:   shl
+ 7d7:   dup2
+ 7d8:   mstore
+ 7d9:   push1 0x04
+ 7db:   add
+ 7dc:   dup1
+ 7dd:   dup3
+ 7de:   dup2
+ 7df:   mstore
+ 7e0:   push1 0x20
+ 7e2:   add
+ 7e3:   swap2
+ 7e4:   pop
+ 7e5:   pop
+ 7e6:   push1 0x20
+ 7e8:   push1 0x40
+ 7ea:   mload
+ 7eb:   dup1
+ 7ec:   dup4
+ 7ed:   sub
+ 7ee:   dup2
+ 7ef:   dup7
+ 7f0:   dup1
+ 7f1:   extcodesize
+ 7f2:   iszero
+ 7f3:   dup1
+ 7f4:   iszero
+ 7f5:   push2 0x0711
+ 7f8:   jumpi
+
+ 7f9:   push1 0x00 # https://www.4byte.directory/signatures/?bytes4_signature=0x00000000
+ 7fb:   dup1
+ 7fc:   invalid_d5
+
+ 7fd:   invalid_b5
+
+ 7fe:   sdiv
+ 7ff:   invalid_af
+
+ 800:   log1
+ 801:   pc
+ 802:   add
+ 803:   jump
+
+ 804:   lt
+ 805:   push19 0x5573d6000803e3d6000fd5b505050506040513
+ 819:   invalid_d6
+
+ 81a:   mul
+ 81b:   addmod
+ 81c:   gt
+ 81d:   add
+ 81e:   jump
+
+ 81f:   lt
+ 820:   push20 0xb57600080fd5b810190808051906020019092919
+ 835:   sdiv
+ 836:   sdiv
+ 837:   sdiv
+ 838:   mulmod
+ 839:   sdiv
+ 83a:   mod
+ 83b:   lt
+ 83c:   push22 0xf565b61075c8261115f565b90505b919050565b60008
+ 853:   calldatasize
+ 854:   stop
+
+ 855:   addmod
+ 856:   mod
+ 857:   stop
+
+ 858:   addmod
+ 859:   codesize
+ 85a:   iszero
+ 85b:   invalid_26
+
+ 85c:   mul
+ 85d:   stop
+
+ 85e:   not
+ 85f:   addmod
+ 860:   iszero
+ 861:   invalid_26
+
+ 862:   mul
+ 863:   stop
+
+ 864:   and
+ 865:   stop
+
+ 866:   mul
+ 867:   mod
+ 868:   stop
+
+ 869:   stop
+
+ 86a:   and
+ 86b:   stop
+
+ 86c:   mulmod
+ 86d:   sdiv
+ 86e:   invalid_49
+
+ 86f:   mod
+ 870:   lt
+ 871:   lt
+ 872:   stop
+
+ 873:   invalid_a9
+
+ 874:   stop
+
+ 875:   selfbalance
+ 876:   extcodehash
+ 877:   selfdestruct
+
+ 878:   selfdestruct
+
+ 879:   selfdestruct
+
+ 87a:   selfdestruct
+
+ 87b:   selfdestruct
+
+ 87c:   selfdestruct
+
+ 87d:   selfdestruct
+
+ 87e:   selfdestruct
+
+ 87f:   selfdestruct
+
+ 880:   selfdestruct
+
+ 881:   selfdestruct
+
+ 882:   selfdestruct
+
+ 883:   selfdestruct
+
+ 884:   selfdestruct
+
+ 885:   selfdestruct
+
+ 886:   selfdestruct
+
+ 887:   selfdestruct
+
+ 888:   selfdestruct
+
+ 889:   selfdestruct
+
+ 88a:   call
+ 88b:   push10 0x0503373fffffffffffff
+ 896:   selfdestruct
+
+ 897:   selfdestruct
+
+ 898:   selfdestruct
+
+ 899:   selfdestruct
+
+ 89a:   selfdestruct
+
+ 89b:   selfdestruct
+
+ 89c:   selfdestruct
+
+ 89d:   selfdestruct
+
+ 89e:   selfdestruct
+
+ 89f:   selfdestruct
+
+ 8a0:   selfdestruct
+
+ 8a1:   selfdestruct
+
+ 8a2:   selfdestruct
+
+ 8a3:   call
+ 8a4:   push9 0x173fffffffffffffff
+ 8ae:   selfdestruct
+
+ 8af:   selfdestruct
+
+ 8b0:   selfdestruct
+
+ 8b1:   selfdestruct
+
+ 8b2:   selfdestruct
+
+ 8b3:   selfdestruct
+
+ 8b4:   selfdestruct
+
+ 8b5:   selfdestruct
+
+ 8b6:   selfdestruct
+
+ 8b7:   selfdestruct
+
+ 8b8:   selfdestruct
+
+ 8b9:   selfdestruct
+
+ 8ba:   call
+ 8bb:   push2 0x4806
+ 8be:   lt
+ 8bf:   dup7
+ 8c0:   iszero
+ 8c1:   push22 0x0600160008273fffffffffffffffffffffffffffffff
+ 8d8:   selfdestruct
+
+ 8d9:   selfdestruct
+
+ 8da:   selfdestruct
+
+ 8db:   selfdestruct
+
+ 8dc:   call
+ 8dd:   push8 0x3fffffffffffffff
+ 8e6:   selfdestruct
+
+ 8e7:   selfdestruct
+
+ 8e8:   selfdestruct
+
+ 8e9:   selfdestruct
+
+ 8ea:   selfdestruct
+
+ 8eb:   selfdestruct
+
+ 8ec:   selfdestruct
+
+ 8ed:   selfdestruct
+
+ 8ee:   selfdestruct
+
+ 8ef:   selfdestruct
+
+ 8f0:   selfdestruct
+
+ 8f1:   selfdestruct
+
+ 8f2:   call
+ 8f3:   push9 0x152602001908152602
+ 8fd:   stop
+
+ 8fe:   and
+ 8ff:   stop
+
+ 900:   mul
+ 901:   mod
+ 902:   stop
+
+ 903:   sub
+ 904:   calldatacopy
+ 905:   extcodehash
+ 906:   selfdestruct
+
+ 907:   selfdestruct
+
+ 908:   selfdestruct
+
+ 909:   selfdestruct
+
+ 90a:   selfdestruct
+
+ 90b:   selfdestruct
+
+ 90c:   selfdestruct
+
+ 90d:   selfdestruct
+
+ 90e:   selfdestruct
+
+ 90f:   selfdestruct
+
+ 910:   selfdestruct
+
+ 911:   selfdestruct
+
+ 912:   selfdestruct
+
+ 913:   selfdestruct
+
+ 914:   selfdestruct
+
+ 915:   selfdestruct
+
+ 916:   selfdestruct
+
+ 917:   selfdestruct
+
+ 918:   selfdestruct
+
+ 919:   call
+ 91a:   push8 0x3fffffffffffffff
+ 923:   selfdestruct
+
+ 924:   selfdestruct
+
+ 925:   selfdestruct
+
+ 926:   selfdestruct
+
+ 927:   selfdestruct
+
+ 928:   selfdestruct
+
+ 929:   selfdestruct
+
+ 92a:   selfdestruct
+
+ 92b:   selfdestruct
+
+ 92c:   selfdestruct
+
+ 92d:   selfdestruct
+
+ 92e:   selfdestruct
+
+ 92f:   call
+ 930:   push9 0x152602001908152602
+ 93a:   stop
+
+ 93b:   and
+ 93c:   stop
+
+ 93d:   mul
+ 93e:   mod
+ 93f:   stop
+
+ 940:   mulmod
+ 941:   sdiv
+ 942:   invalid_49
+
+ 943:   mod
+ 944:   lt
+ 945:   lt
+ 946:   stop
+
+ 947:   invalid_a9
+
+ 948:   stop
+
+ 949:   chainid
+ 94a:   invalid_0f
+
+ 94b:   call
+ 94c:   push6 0xb61086a57600
+ 953:   addmod
+ 954:   invalid_0f
+
+ 955:   invalid_d5
+
+ 956:   invalid_b6
+
+ 957:   stop
+
+ 958:   addmod
+ 959:   push9 0x660405160200180838
+ 963:   iszero
+ 964:   invalid_26
+
+ 965:   mul
+ 966:   stop
+
+ 967:   xor
+ 968:   invalid_28
+
+ 969:   iszero
+ 96a:   invalid_26
+
+ 96b:   mul
+ 96c:   stop
+
+ 96d:   not
+ 96e:   invalid_25
+
+ 96f:   sdiv
+ 970:   sdiv
+ 971:   mod
+ 972:   div
+ 973:   sdiv
+ 974:   and
+ 975:   mul
+ 976:   addmod
+ 977:   xor
+ 978:   address
+ 979:   address
+ 97a:   codesize
+ 97b:   iszero
+ 97c:   invalid_29
+
+ 97d:   mod
+ 97e:   div
+ 97f:   sdiv
+ 980:   invalid_28
+
+ 981:   sdiv
+ 982:   not
+ 983:   mod
+ 984:   mul
+ 985:   stop
+
+ 986:   slt
+ 987:   mulmod
+ 988:   sdiv
+ 989:   mod
+ 98a:   lt
+ 98b:   dup11
+ 98c:   push25 0x1866111e2565b85877fce0457fe73731f824cc272376169235
+ 9a6:   slt
+ 9a7:   dup13
+ 9a8:   gt
+ 9a9:   dup12
+ 9aa:   invalid_49
+
+ 9ab:   invalid_d3
+
+ 9ac:   difficulty
+ 9ad:   dup2
+ 9ae:   push21 0x17c6d108d155e8287604051808273fffffffffffff
+ 9c4:   selfdestruct
+
+ 9c5:   selfdestruct
+
+ 9c6:   selfdestruct
+
+ 9c7:   selfdestruct
+
+ 9c8:   selfdestruct
+
+ 9c9:   selfdestruct
+
+ 9ca:   selfdestruct
+
+ 9cb:   selfdestruct
+
+ 9cc:   selfdestruct
+
+ 9cd:   selfdestruct
+
+ 9ce:   selfdestruct
+
+ 9cf:   selfdestruct
+
+ 9d0:   selfdestruct
+
+ 9d1:   call
+ 9d2:   push8 0x3fffffffffffffff
+ 9db:   selfdestruct
+
+ 9dc:   selfdestruct
+
+ 9dd:   selfdestruct
+
+ 9de:   selfdestruct
+
+ 9df:   selfdestruct
+
+ 9e0:   selfdestruct
+
+ 9e1:   selfdestruct
+
+ 9e2:   selfdestruct
+
+ 9e3:   selfdestruct
+
+ 9e4:   selfdestruct
+
+ 9e5:   selfdestruct
+
+ 9e6:   selfdestruct
+
+ 9e7:   call
+ 9e8:   push9 0x152602001915050604
+ 9f2:   sdiv
+ 9f3:   xor
+ 9f4:   mulmod
+ 9f5:   lt
+ 9f6:   codecopy
+ 9f7:   exp
+ 9f8:   codesize
+ 9f9:   mulmod
+ 9fa:   calldataload
+ 9fb:   sdiv
+ 9fc:   sdiv
+ 9fd:   sdiv
+ 9fe:   mulmod
+ 9ff:   codecopy
+ a00:   invalid_25
+
+ a01:   sdiv
+ a02:   sdiv
+ a03:   sdiv
+ a04:   push6 0xb81600080600
+ a0b:   addmod
+ a0c:   codesize
+ a0d:   iszero
+ a0e:   invalid_26
+
+ a0f:   mul
+ a10:   stop
+
+ a11:   not
+ a12:   addmod
+ a13:   iszero
+ a14:   invalid_26
+
+ a15:   mul
+ a16:   stop
+
+ a17:   and
+ a18:   stop
+
+ a19:   mul
+ a1a:   mod
+ a1b:   stop
+
+ a1c:   stop
+
+ a1d:   and
+ a1e:   stop
+
+ a1f:   mulmod
+ a20:   sdiv
+ a21:   invalid_49
+
+ a22:   mod
+ a23:   lt
+ a24:   lt
+ a25:   stop
+
+ a26:   invalid_a9
+
+ a27:   stop
+
+ a28:   selfbalance
+ a29:   extcodehash
+ a2a:   selfdestruct
+
+ a2b:   selfdestruct
+
+ a2c:   selfdestruct
+
+ a2d:   selfdestruct
+
+ a2e:   selfdestruct
+
+ a2f:   selfdestruct
+
+ a30:   selfdestruct
+
+ a31:   selfdestruct
+
+ a32:   selfdestruct
+
+ a33:   selfdestruct
+
+ a34:   selfdestruct
+
+ a35:   selfdestruct
+
+ a36:   selfdestruct
+
+ a37:   selfdestruct
+
+ a38:   selfdestruct
+
+ a39:   selfdestruct
+
+ a3a:   selfdestruct
+
+ a3b:   selfdestruct
+
+ a3c:   selfdestruct
+
+ a3d:   call
+ a3e:   push10 0x0503373fffffffffffff
+ a49:   selfdestruct
+
+ a4a:   selfdestruct
+
+ a4b:   selfdestruct
+
+ a4c:   selfdestruct
+
+ a4d:   selfdestruct
+
+ a4e:   selfdestruct
+
+ a4f:   selfdestruct
+
+ a50:   selfdestruct
+
+ a51:   selfdestruct
+
+ a52:   selfdestruct
+
+ a53:   selfdestruct
+
+ a54:   selfdestruct
+
+ a55:   selfdestruct
+
+ a56:   call
+ a57:   push9 0x173fffffffffffffff
+ a61:   selfdestruct
+
+ a62:   selfdestruct
+
+ a63:   selfdestruct
+
+ a64:   selfdestruct
+
+ a65:   selfdestruct
+
+ a66:   selfdestruct
+
+ a67:   selfdestruct
+
+ a68:   selfdestruct
+
+ a69:   selfdestruct
+
+ a6a:   selfdestruct
+
+ a6b:   selfdestruct
+
+ a6c:   selfdestruct
+
+ a6d:   call
+ a6e:   push2 0x4806
+ a71:   lt
+ a72:   log1
+ a73:   gaslimit
+ a74:   push22 0x0600160008273fffffffffffffffffffffffffffffff
+ a8b:   selfdestruct
+
+ a8c:   selfdestruct
+
+ a8d:   selfdestruct
+
+ a8e:   selfdestruct
+
+ a8f:   call
+ a90:   push8 0x3fffffffffffffff
+ a99:   selfdestruct
+
+ a9a:   selfdestruct
+
+ a9b:   selfdestruct
+
+ a9c:   selfdestruct
+
+ a9d:   selfdestruct
+
+ a9e:   selfdestruct
+
+ a9f:   selfdestruct
+
+ aa0:   selfdestruct
+
+ aa1:   selfdestruct
+
+ aa2:   selfdestruct
+
+ aa3:   selfdestruct
+
+ aa4:   selfdestruct
+
+ aa5:   call
+ aa6:   push9 0x152602001908152602
+ ab0:   stop
+
+ ab1:   and
+ ab2:   stop
+
+ ab3:   mul
+ ab4:   mod
+ ab5:   stop
+
+ ab6:   sub
+ ab7:   calldatacopy
+ ab8:   extcodehash
+ ab9:   selfdestruct
+
+ aba:   selfdestruct
+
+ abb:   selfdestruct
+
+ abc:   selfdestruct
+
+ abd:   selfdestruct
+
+ abe:   selfdestruct
+
+ abf:   selfdestruct
+
+ ac0:   selfdestruct
+
+ ac1:   selfdestruct
+
+ ac2:   selfdestruct
+
+ ac3:   selfdestruct
+
+ ac4:   selfdestruct
+
+ ac5:   selfdestruct
+
+ ac6:   selfdestruct
+
+ ac7:   selfdestruct
+
+ ac8:   selfdestruct
+
+ ac9:   selfdestruct
+
+ aca:   selfdestruct
+
+ acb:   selfdestruct
+
+ acc:   call
+ acd:   push8 0x3fffffffffffffff
+ ad6:   selfdestruct
+
+ ad7:   selfdestruct
+
+ ad8:   selfdestruct
+
+ ad9:   selfdestruct
+
+ ada:   selfdestruct
+
+ adb:   selfdestruct
+
+ adc:   selfdestruct
+
+ add:   selfdestruct
+
+ ade:   selfdestruct
+
+ adf:   selfdestruct
+
+ ae0:   selfdestruct
+
+ ae1:   selfdestruct
+
+ ae2:   call
+ ae3:   push9 0x152602001908152602
+ aed:   stop
+
+ aee:   and
+ aef:   stop
+
+ af0:   mul
+ af1:   mod
+ af2:   stop
+
+ af3:   mulmod
+ af4:   sdiv
+ af5:   invalid_49
+
+ af6:   mod
+ af7:   lt
+ af8:   lt
+ af9:   stop
+
+ afa:   invalid_a9
+
+ afb:   stop
+
+ afc:   chainid
+ afd:   invalid_0f
+
+ afe:   call
+ aff:   push6 0xb610a1d57600
+ b06:   addmod
+ b07:   invalid_0f
+
+ b08:   invalid_d5
+
+ b09:   invalid_b8
+
+ b0a:   calldatacopy
+ b0b:   call
+ b0c:   invalid_d4
+
+ b0d:   invalid_f9
+
+ b0e:   invalid_bb
+
+ b0f:   invalid_fc
+
+ b10:   swap13
+ b11:   invalid_ab
+
+ b12:   dup10
+ b13:   invalid_d6
+
+ b14:   push15 0x1a1562f2233ccbf1308cb4f63de2ea
+ b24:   invalid_d5
+
+ b25:   push25 0x7adddb8fa6884604051808267ffffffffffffffff1667fffff
+ b3f:   selfdestruct
+
+ b40:   selfdestruct
+
+ b41:   selfdestruct
+
+ b42:   selfdestruct
+
+ b43:   selfdestruct
+
+ b44:   call
+ b45:   push9 0x152602001915050604
+ b4f:   sdiv
+ b50:   xor
+ b51:   mulmod
+ b52:   lt
+ b53:   codecopy
+ b54:   exp
+ b55:   invalid_28
+
+ b56:   invalid_26
+
+ b57:   stop
+
+ b58:   addmod
+ b59:   addmod
+ b5a:   push9 0x152602001908152602
+ b64:   stop
+
+ b65:   and
+ b66:   stop
+
+ b67:   mul
+ b68:   mod
+ b69:   stop
+
+ b6a:   lt
+ b6b:   and
+ b6c:   add
+ b6d:   chainid
+ b6e:   lt
+ b6f:   lt
+ b70:   stop
+
+ b71:   invalid_a8
+
+ b72:   iszero
+ b73:   basefee
+ b74:   and
+ b75:   push32 0xfffffffffffffff021916908367ffffffffffffffff160217905550505050505
+ b96:   push6 0xb6000610ab68
+ b9d:   invalid_26
+
+ b9e:   gt
+ b9f:   signextend
+ ba0:   invalid_25
+
+ ba1:   push6 0xb610b6f57600
+ ba8:   invalid_26
+
+ ba9:   stop
+
+ baa:   mulmod
+ bab:   sdiv
+ bac:   invalid_49
+
+ bad:   mod
+ bae:   lt
+ baf:   lt
+ bb0:   stop
+
+ bb1:   invalid_a9
+
+ bb2:   stop
+
+ bb3:   selfbalance
+ bb4:   extcodehash
+ bb5:   selfdestruct
+
+ bb6:   selfdestruct
+
+ bb7:   selfdestruct
+
+ bb8:   selfdestruct
+
+ bb9:   selfdestruct
+
+ bba:   selfdestruct
+
+ bbb:   selfdestruct
+
+ bbc:   selfdestruct
+
+ bbd:   selfdestruct
+
+ bbe:   selfdestruct
+
+ bbf:   selfdestruct
+
+ bc0:   selfdestruct
+
+ bc1:   selfdestruct
+
+ bc2:   selfdestruct
+
+ bc3:   selfdestruct
+
+ bc4:   selfdestruct
+
+ bc5:   selfdestruct
+
+ bc6:   selfdestruct
+
+ bc7:   selfdestruct
+
+ bc8:   call
+ bc9:   push8 0x3fffffffffffffff
+ bd2:   selfdestruct
+
+ bd3:   selfdestruct
+
+ bd4:   selfdestruct
+
+ bd5:   selfdestruct
+
+ bd6:   selfdestruct
+
+ bd7:   selfdestruct
+
+ bd8:   selfdestruct
+
+ bd9:   selfdestruct
+
+ bda:   selfdestruct
+
+ bdb:   selfdestruct
+
+ bdc:   selfdestruct
+
+ bdd:   selfdestruct
+
+ bde:   call
+ bdf:   push7 0x316a25cbd83604
+ be7:   sdiv
+ be8:   xor
+ be9:   invalid_26
+
+ bea:   extcodehash
+ beb:   selfdestruct
+
+ bec:   selfdestruct
+
+ bed:   selfdestruct
+
+ bee:   call
+ bef:   push7 0x0e01b815260040
+ bf7:   xor
+ bf8:   addmod
+ bf9:   invalid_28
+
+ bfa:   iszero
+ bfb:   invalid_26
+
+ bfc:   mul
+ bfd:   stop
+
+ bfe:   not
+ bff:   iszero
+ c00:   sdiv
+ c01:   mod
+ c02:   mul
+ c03:   mod
+ c04:   div
+ c05:   sdiv
+ c06:   xor
+ c07:   addmod
+ c08:   address
+ c09:   codesize
+ c0a:   xor
+ c0b:   push9 0x03b158015610b2d576
+ c15:   stop
+
+ c16:   addmod
+ c17:   invalid_0f
+
+ c18:   invalid_d5
+
+ c19:   invalid_b5
+
+ c1a:   sdiv
+ c1b:   invalid_af
+
+ c1c:   log1
+ c1d:   pc
+ c1e:   add
+ c1f:   jump
+
+ c20:   lt
+ c21:   invalid_b4
+
+ c22:   iszero
+ c23:   push20 0xd6000803e3d6000fd5b505050506040513d60208
+ c38:   gt
+ c39:   add
+ c3a:   jump
+
+ c3b:   lt
+ c3c:   invalid_b5
+
+ c3d:   push22 0x7600080fd5b810190808051906020019092919050505
+ c54:   mulmod
+ c55:   sdiv
+ c56:   mod
+ c57:   lt
+ c58:   invalid_b7
+
+ c59:   invalid_b5
+
+ c5a:   push6 0xb610b7882611
+ c61:   invalid_22
+
+ c62:   create2
+ c63:   push6 0xb90505b91905
+ c6a:   sdiv
+ c6b:   push6 0xb81600080600
+ c72:   addmod
+ c73:   codesize
+ c74:   iszero
+ c75:   invalid_26
+
+ c76:   mul
+ c77:   stop
+
+ c78:   not
+ c79:   addmod
+ c7a:   iszero
+ c7b:   invalid_26
+
+ c7c:   mul
+ c7d:   stop
+
+ c7e:   and
+ c7f:   stop
+
+ c80:   mul
+ c81:   mod
+ c82:   stop
+
+ c83:   stop
+
+ c84:   and
+ c85:   stop
+
+ c86:   mulmod
+ c87:   sdiv
+ c88:   invalid_49
+
+ c89:   mod
+ c8a:   lt
+ c8b:   lt
+ c8c:   stop
+
+ c8d:   invalid_a9
+
+ c8e:   stop
+
+ c8f:   selfbalance
+ c90:   extcodehash
+ c91:   selfdestruct
+
+ c92:   selfdestruct
+
+ c93:   selfdestruct
+
+ c94:   selfdestruct
+
+ c95:   selfdestruct
+
+ c96:   selfdestruct
+
+ c97:   selfdestruct
+
+ c98:   selfdestruct
+
+ c99:   selfdestruct
+
+ c9a:   selfdestruct
+
+ c9b:   selfdestruct
+
+ c9c:   selfdestruct
+
+ c9d:   selfdestruct
+
+ c9e:   selfdestruct
+
+ c9f:   selfdestruct
+
+ ca0:   selfdestruct
+
+ ca1:   selfdestruct
+
+ ca2:   selfdestruct
+
+ ca3:   selfdestruct
+
+ ca4:   call
+ ca5:   push10 0x0503373fffffffffffff
+ cb0:   selfdestruct
+
+ cb1:   selfdestruct
+
+ cb2:   selfdestruct
+
+ cb3:   selfdestruct
+
+ cb4:   selfdestruct
+
+ cb5:   selfdestruct
+
+ cb6:   selfdestruct
+
+ cb7:   selfdestruct
+
+ cb8:   selfdestruct
+
+ cb9:   selfdestruct
+
+ cba:   selfdestruct
+
+ cbb:   selfdestruct
+
+ cbc:   selfdestruct
+
+ cbd:   call
+ cbe:   push9 0x173fffffffffffffff
+ cc8:   selfdestruct
+
+ cc9:   selfdestruct
+
+ cca:   selfdestruct
+
+ ccb:   selfdestruct
+
+ ccc:   selfdestruct
+
+ ccd:   selfdestruct
+
+ cce:   selfdestruct
+
+ ccf:   selfdestruct
+
+ cd0:   selfdestruct
+
+ cd1:   selfdestruct
+
+ cd2:   selfdestruct
+
+ cd3:   selfdestruct
+
+ cd4:   call
+ cd5:   push2 0x4806
+ cd8:   lt
+ cd9:   invalid_c7
+
+ cda:   invalid_b5
+
+ cdb:   push22 0x0600160008273fffffffffffffffffffffffffffffff
+ cf2:   selfdestruct
+
+ cf3:   selfdestruct
+
+ cf4:   selfdestruct
+
+ cf5:   selfdestruct
+
+ cf6:   call
+ cf7:   push8 0x3fffffffffffffff
+ d00:   selfdestruct
+
+ d01:   selfdestruct
+
+ d02:   selfdestruct
+
+ d03:   selfdestruct
+
+ d04:   selfdestruct
+
+ d05:   selfdestruct
+
+ d06:   selfdestruct
+
+ d07:   selfdestruct
+
+ d08:   selfdestruct
+
+ d09:   selfdestruct
+
+ d0a:   selfdestruct
+
+ d0b:   selfdestruct
+
+ d0c:   call
+ d0d:   push9 0x152602001908152602
+ d17:   stop
+
+ d18:   and
+ d19:   stop
+
+ d1a:   mul
+ d1b:   mod
+ d1c:   stop
+
+ d1d:   sub
+ d1e:   calldatacopy
+ d1f:   extcodehash
+ d20:   selfdestruct
+
+ d21:   selfdestruct
+
+ d22:   selfdestruct
+
+ d23:   selfdestruct
+
+ d24:   selfdestruct
+
+ d25:   selfdestruct
+
+ d26:   selfdestruct
+
+ d27:   selfdestruct
+
+ d28:   selfdestruct
+
+ d29:   selfdestruct
+
+ d2a:   selfdestruct
+
+ d2b:   selfdestruct
+
+ d2c:   selfdestruct
+
+ d2d:   selfdestruct
+
+ d2e:   selfdestruct
+
+ d2f:   selfdestruct
+
+ d30:   selfdestruct
+
+ d31:   selfdestruct
+
+ d32:   selfdestruct
+
+ d33:   call
+ d34:   push8 0x3fffffffffffffff
+ d3d:   selfdestruct
+
+ d3e:   selfdestruct
+
+ d3f:   selfdestruct
+
+ d40:   selfdestruct
+
+ d41:   selfdestruct
+
+ d42:   selfdestruct
+
+ d43:   selfdestruct
+
+ d44:   selfdestruct
+
+ d45:   selfdestruct
+
+ d46:   selfdestruct
+
+ d47:   selfdestruct
+
+ d48:   selfdestruct
+
+ d49:   call
+ d4a:   push9 0x152602001908152602
+ d54:   stop
+
+ d55:   and
+ d56:   stop
+
+ d57:   mul
+ d58:   mod
+ d59:   stop
+
+ d5a:   mulmod
+ d5b:   sdiv
+ d5c:   invalid_49
+
+ d5d:   mod
+ d5e:   lt
+ d5f:   lt
+ d60:   stop
+
+ d61:   invalid_a9
+
+ d62:   stop
+
+ d63:   chainid
+ d64:   invalid_0f
+
+ d65:   call
+ d66:   push6 0xb610c8457600
+ d6d:   addmod
+ d6e:   invalid_0f
+
+ d6f:   invalid_d5
+
+ d70:   invalid_b8
+
+ d71:   calldatacopy
+ d72:   return
+
+ d73:   calldataload
+ d74:   push19 0x1b01866dc23fbee8b6b2c7b1e14d6f05c28cd3
+ d88:   gas
+ d89:   invalid_2c
+
+ d8a:   swap4
+ d8b:   timestamp
+ d8c:   codecopy
+ d8d:   invalid_f9
+
+ d8e:   blockhash
+ d8f:   swap6
+ d90:   push1 0x2a
+ d92:   addmod
+ d93:   chainid
+ d94:   div
+ d95:   sdiv
+ d96:   xor
+ d97:   addmod
+ d98:   invalid_27
+
+ d99:   extcodehash
+ d9a:   selfdestruct
+
+ d9b:   selfdestruct
+
+ d9c:   selfdestruct
+
+ d9d:   selfdestruct
+
+ d9e:   selfdestruct
+
+ d9f:   selfdestruct
+
+ da0:   selfdestruct
+
+ da1:   selfdestruct
+
+ da2:   selfdestruct
+
+ da3:   selfdestruct
+
+ da4:   selfdestruct
+
+ da5:   selfdestruct
+
+ da6:   selfdestruct
+
+ da7:   selfdestruct
+
+ da8:   selfdestruct
+
+ da9:   selfdestruct
+
+ daa:   selfdestruct
+
+ dab:   selfdestruct
+
+ dac:   selfdestruct
+
+ dad:   call
+ dae:   push8 0x3fffffffffffffff
+ db7:   selfdestruct
+
+ db8:   selfdestruct
+
+ db9:   selfdestruct
+
+ dba:   selfdestruct
+
+ dbb:   selfdestruct
+
+ dbc:   selfdestruct
+
+ dbd:   selfdestruct
+
+ dbe:   selfdestruct
+
+ dbf:   selfdestruct
+
+ dc0:   selfdestruct
+
+ dc1:   selfdestruct
+
+ dc2:   selfdestruct
+
+ dc3:   call
+ dc4:   push9 0x152602001915050604
+ dce:   sdiv
+ dcf:   xor
+ dd0:   mulmod
+ dd1:   lt
+ dd2:   codecopy
+ dd3:   exp
+ dd4:   invalid_28
+
+ dd5:   invalid_26
+
+ dd6:   stop
+
+ dd7:   addmod
+ dd8:   addmod
+ dd9:   push9 0x152602001908152602
+ de3:   stop
+
+ de4:   and
+ de5:   stop
+
+ de6:   mul
+ de7:   mod
+ de8:   stop
+
+ de9:   lt
+ dea:   and
+ deb:   stop
+
+ dec:   mod
+ ded:   lt
+ dee:   lt
+ def:   stop
+
+ df0:   invalid_a8
+
+ df1:   iszero
+ df2:   basefee
+ df3:   or
+ df4:   extcodehash
+ df5:   selfdestruct
+
+ df6:   selfdestruct
+
+ df7:   selfdestruct
+
+ df8:   selfdestruct
+
+ df9:   selfdestruct
+
+ dfa:   selfdestruct
+
+ dfb:   selfdestruct
+
+ dfc:   selfdestruct
+
+ dfd:   selfdestruct
+
+ dfe:   selfdestruct
+
+ dff:   selfdestruct
+
+ e00:   selfdestruct
+
+ e01:   selfdestruct
+
+ e02:   selfdestruct
+
+ e03:   selfdestruct
+
+ e04:   selfdestruct
+
+ e05:   selfdestruct
+
+ e06:   selfdestruct
+
+ e07:   selfdestruct
+
+ e08:   create
+ e09:   invalid_21
+
+ e0a:   swap2
+ e0b:   push10 0x08373fffffffffffffff
+ e16:   selfdestruct
+
+ e17:   selfdestruct
+
+ e18:   selfdestruct
+
+ e19:   selfdestruct
+
+ e1a:   selfdestruct
+
+ e1b:   selfdestruct
+
+ e1c:   selfdestruct
+
+ e1d:   selfdestruct
+
+ e1e:   selfdestruct
+
+ e1f:   selfdestruct
+
+ e20:   selfdestruct
+
+ e21:   selfdestruct
+
+ e22:   call
+ e23:   push1 0x21
+ e25:   push26 0x0555050505050565b81600080600083815260200190815260200
+ e40:   and
+ e41:   stop
+
+ e42:   mul
+ e43:   mod
+ e44:   stop
+
+ e45:   stop
+
+ e46:   and
+ e47:   stop
+
+ e48:   mulmod
+ e49:   sdiv
+ e4a:   invalid_49
+
+ e4b:   mod
+ e4c:   lt
+ e4d:   lt
+ e4e:   stop
+
+ e4f:   invalid_a9
+
+ e50:   stop
+
+ e51:   selfbalance
+ e52:   extcodehash
+ e53:   selfdestruct
+
+ e54:   selfdestruct
+
+ e55:   selfdestruct
+
+ e56:   selfdestruct
+
+ e57:   selfdestruct
+
+ e58:   selfdestruct
+
+ e59:   selfdestruct
+
+ e5a:   selfdestruct
+
+ e5b:   selfdestruct
+
+ e5c:   selfdestruct
+
+ e5d:   selfdestruct
+
+ e5e:   selfdestruct
+
+ e5f:   selfdestruct
+
+ e60:   selfdestruct
+
+ e61:   selfdestruct
+
+ e62:   selfdestruct
+
+ e63:   selfdestruct
+
+ e64:   selfdestruct
+
+ e65:   selfdestruct
+
+ e66:   call
+ e67:   push10 0x0503373fffffffffffff
+ e72:   selfdestruct
+
+ e73:   selfdestruct
+
+ e74:   selfdestruct
+
+ e75:   selfdestruct
+
+ e76:   selfdestruct
+
+ e77:   selfdestruct
+
+ e78:   selfdestruct
+
+ e79:   selfdestruct
+
+ e7a:   selfdestruct
+
+ e7b:   selfdestruct
+
+ e7c:   selfdestruct
+
+ e7d:   selfdestruct
+
+ e7e:   selfdestruct
+
+ e7f:   call
+ e80:   push9 0x173fffffffffffffff
+ e8a:   selfdestruct
+
+ e8b:   selfdestruct
+
+ e8c:   selfdestruct
+
+ e8d:   selfdestruct
+
+ e8e:   selfdestruct
+
+ e8f:   selfdestruct
+
+ e90:   selfdestruct
+
+ e91:   selfdestruct
+
+ e92:   selfdestruct
+
+ e93:   selfdestruct
+
+ e94:   selfdestruct
+
+ e95:   selfdestruct
+
+ e96:   call
+ e97:   push2 0x4806
+ e9a:   lt
+ e9b:   invalid_e3
+
+ e9c:   invalid_d5
+
+ e9d:   push22 0x0600160008273fffffffffffffffffffffffffffffff
+ eb4:   selfdestruct
+
+ eb5:   selfdestruct
+
+ eb6:   selfdestruct
+
+ eb7:   selfdestruct
+
+ eb8:   call
+ eb9:   push8 0x3fffffffffffffff
+ ec2:   selfdestruct
+
+ ec3:   selfdestruct
+
+ ec4:   selfdestruct
+
+ ec5:   selfdestruct
+
+ ec6:   selfdestruct
+
+ ec7:   selfdestruct
+
+ ec8:   selfdestruct
+
+ ec9:   selfdestruct
+
+ eca:   selfdestruct
+
+ ecb:   selfdestruct
+
+ ecc:   selfdestruct
+
+ ecd:   selfdestruct
+
+ ece:   call
+ ecf:   push9 0x152602001908152602
+ ed9:   stop
+
+ eda:   and
+ edb:   stop
+
+ edc:   mul
+ edd:   mod
+ ede:   stop
+
+ edf:   sub
+ ee0:   calldatacopy
+ ee1:   extcodehash
+ ee2:   selfdestruct
+
+ ee3:   selfdestruct
+
+ ee4:   selfdestruct
+
+ ee5:   selfdestruct
+
+ ee6:   selfdestruct
+
+ ee7:   selfdestruct
+
+ ee8:   selfdestruct
+
+ ee9:   selfdestruct
+
+ eea:   selfdestruct
+
+ eeb:   selfdestruct
+
+ eec:   selfdestruct
+
+ eed:   selfdestruct
+
+ eee:   selfdestruct
+
+ eef:   selfdestruct
+
+ ef0:   selfdestruct
+
+ ef1:   selfdestruct
+
+ ef2:   selfdestruct
+
+ ef3:   selfdestruct
+
+ ef4:   selfdestruct
+
+ ef5:   call
+ ef6:   push8 0x3fffffffffffffff
+ eff:   selfdestruct
+
+ f00:   selfdestruct
+
+ f01:   selfdestruct
+
+ f02:   selfdestruct
+
+ f03:   selfdestruct
+
+ f04:   selfdestruct
+
+ f05:   selfdestruct
+
+ f06:   selfdestruct
+
+ f07:   selfdestruct
+
+ f08:   selfdestruct
+
+ f09:   selfdestruct
+
+ f0a:   selfdestruct
+
+ f0b:   call
+ f0c:   push9 0x152602001908152602
+ f16:   stop
+
+ f17:   and
+ f18:   stop
+
+ f19:   mul
+ f1a:   mod
+ f1b:   stop
+
+ f1c:   mulmod
+ f1d:   sdiv
+ f1e:   invalid_49
+
+ f1f:   mod
+ f20:   lt
+ f21:   lt
+ f22:   stop
+
+ f23:   invalid_a9
+
+ f24:   stop
+
+ f25:   chainid
+ f26:   invalid_0f
+
+ f27:   call
+ f28:   push6 0xb610e4657600
+ f2f:   addmod
+ f30:   invalid_0f
+
+ f31:   invalid_d5
+
+ f32:   invalid_b6
+
+ f33:   lt
+ f34:   invalid_e5
+
+ f35:   addmod
+ f36:   basefee
+ f37:   chainid
+ f38:   gt
+ f39:   invalid_1e
+
+ f3a:   invalid_25
+
+ f3b:   push6 0xb837fd4735d9
+ f42:   keccak256
+ f43:   invalid_b0
+
+ f44:   invalid_f8
+
+ f45:   push21 0x94915f556dd9b54c8f309026070caea5c737245152
+ f5b:   jump
+
+ f5c:   invalid_4d
+
+ f5d:   invalid_26
+
+ f5e:   push9 0x4604051808273fffff
+ f68:   selfdestruct
+
+ f69:   selfdestruct
+
+ f6a:   selfdestruct
+
+ f6b:   selfdestruct
+
+ f6c:   selfdestruct
+
+ f6d:   selfdestruct
+
+ f6e:   selfdestruct
+
+ f6f:   selfdestruct
+
+ f70:   selfdestruct
+
+ f71:   selfdestruct
+
+ f72:   selfdestruct
+
+ f73:   selfdestruct
+
+ f74:   selfdestruct
+
+ f75:   selfdestruct
+
+ f76:   selfdestruct
+
+ f77:   selfdestruct
+
+ f78:   selfdestruct
+
+ f79:   call
+ f7a:   push8 0x3fffffffffffffff
+ f83:   selfdestruct
+
+ f84:   selfdestruct
+
+ f85:   selfdestruct
+
+ f86:   selfdestruct
+
+ f87:   selfdestruct
+
+ f88:   selfdestruct
+
+ f89:   selfdestruct
+
+ f8a:   selfdestruct
+
+ f8b:   selfdestruct
+
+ f8c:   selfdestruct
+
+ f8d:   selfdestruct
+
+ f8e:   selfdestruct
+
+ f8f:   call
+ f90:   push9 0x152602001915050604
+ f9a:   sdiv
+ f9b:   xor
+ f9c:   mulmod
+ f9d:   lt
+ f9e:   codecopy
+ f9f:   exp
+ fa0:   invalid_25
+
+ fa1:   sdiv
+ fa2:   sdiv
+ fa3:   sdiv
+ fa4:   sdiv
+ fa5:   push6 0xb6000610ec78
+ fac:   push9 0x686610764565b90506
+ fb6:   lt
+ fb7:   invalid_ed
+
+ fb8:   basefee
+ fb9:   xor
+ fba:   basefee
+ fbb:   chainid
+ fbc:   gt
+ fbd:   invalid_26
+
+ fbe:   invalid_25
+
+ fbf:   push6 0xb50505050505
+ fc6:   sdiv
+ fc7:   push6 0xb80600160003
+ fce:   calldatacopy
+ fcf:   extcodehash
+ fd0:   selfdestruct
+
+ fd1:   selfdestruct
+
+ fd2:   selfdestruct
+
+ fd3:   selfdestruct
+
+ fd4:   selfdestruct
+
+ fd5:   selfdestruct
+
+ fd6:   selfdestruct
+
+ fd7:   selfdestruct
+
+ fd8:   selfdestruct
+
+ fd9:   selfdestruct
+
+ fda:   selfdestruct
+
+ fdb:   selfdestruct
+
+ fdc:   selfdestruct
+
+ fdd:   selfdestruct
+
+ fde:   selfdestruct
+
+ fdf:   selfdestruct
+
+ fe0:   selfdestruct
+
+ fe1:   selfdestruct
+
+ fe2:   selfdestruct
+
+ fe3:   call
+ fe4:   push8 0x3fffffffffffffff
+ fed:   selfdestruct
+
+ fee:   selfdestruct
+
+ fef:   selfdestruct
+
+ ff0:   selfdestruct
+
+ ff1:   selfdestruct
+
+ ff2:   selfdestruct
+
+ ff3:   selfdestruct
+
+ ff4:   selfdestruct
+
+ ff5:   selfdestruct
+
+ ff6:   selfdestruct
+
+ ff7:   selfdestruct
+
+ ff8:   selfdestruct
+
+ ff9:   call
+ ffa:   push9 0x152602001908152602
+1004:   stop
+
+1005:   and
+1006:   stop
+
+1007:   mul
+1008:   mod
+1009:   stop
+
+100a:   addmod
+100b:   selfbalance
+100c:   extcodehash
+100d:   selfdestruct
+
+100e:   selfdestruct
+
+100f:   selfdestruct
+
+1010:   selfdestruct
+
+1011:   selfdestruct
+
+1012:   selfdestruct
+
+1013:   selfdestruct
+
+1014:   selfdestruct
+
+1015:   selfdestruct
+
+1016:   selfdestruct
+
+1017:   selfdestruct
+
+1018:   selfdestruct
+
+1019:   selfdestruct
+
+101a:   selfdestruct
+
+101b:   selfdestruct
+
+101c:   selfdestruct
+
+101d:   selfdestruct
+
+101e:   selfdestruct
+
+101f:   selfdestruct
+
+1020:   call
+1021:   push8 0x3fffffffffffffff
+102a:   selfdestruct
+
+102b:   selfdestruct
+
+102c:   selfdestruct
+
+102d:   selfdestruct
+
+102e:   selfdestruct
+
+102f:   selfdestruct
+
+1030:   selfdestruct
+
+1031:   selfdestruct
+
+1032:   selfdestruct
+
+1033:   selfdestruct
+
+1034:   selfdestruct
+
+1035:   selfdestruct
+
+1036:   call
+1037:   push9 0x152602001908152602
+1041:   stop
+
+1042:   and
+1043:   stop
+
+1044:   mul
+1045:   mod
+1046:   stop
+
+1047:   mod
+1048:   lt
+1049:   lt
+104a:   stop
+
+104b:   invalid_a8
+
+104c:   iszero
+104d:   basefee
+104e:   and
+104f:   invalid_0f
+
+1050:   create
+1051:   invalid_21
+
+1052:   swap2
+1053:   push10 0x08315150217905550817
+105e:   extcodehash
+105f:   selfdestruct
+
+1060:   selfdestruct
+
+1061:   selfdestruct
+
+1062:   selfdestruct
+
+1063:   selfdestruct
+
+1064:   selfdestruct
+
+1065:   selfdestruct
+
+1066:   selfdestruct
+
+1067:   selfdestruct
+
+1068:   selfdestruct
+
+1069:   selfdestruct
+
+106a:   selfdestruct
+
+106b:   selfdestruct
+
+106c:   selfdestruct
+
+106d:   selfdestruct
+
+106e:   selfdestruct
+
+106f:   selfdestruct
+
+1070:   selfdestruct
+
+1071:   selfdestruct
+
+1072:   call
+1073:   push4 0x373fffff
+1078:   selfdestruct
+
+1079:   selfdestruct
+
+107a:   selfdestruct
+
+107b:   selfdestruct
+
+107c:   selfdestruct
+
+107d:   selfdestruct
+
+107e:   selfdestruct
+
+107f:   selfdestruct
+
+1080:   selfdestruct
+
+1081:   selfdestruct
+
+1082:   selfdestruct
+
+1083:   selfdestruct
+
+1084:   selfdestruct
+
+1085:   selfdestruct
+
+1086:   selfdestruct
+
+1087:   selfdestruct
+
+1088:   selfdestruct
+
+1089:   call
+108a:   push8 0xf17307eab39ab610
+1093:   push31 0x8899845ad3d59bd9653f200f220920489ca2b5937696c31836040518082151
+10b3:   mload
+10b4:   mload
+10b5:   pc
+10b6:   iszero
+10b7:   invalid_26
+
+10b8:   mul
+10b9:   stop
+
+10ba:   not
+10bb:   iszero
+10bc:   sdiv
+10bd:   mod
+10be:   div
+10bf:   sdiv
+10c0:   xor
+10c1:   mulmod
+10c2:   lt
+10c3:   codecopy
+10c4:   exp
+10c5:   calldataload
+10c6:   sdiv
+10c7:   sdiv
+10c8:   push6 0xb60026000905
+10cf:   invalid_49
+
+10d0:   mod
+10d1:   lt
+10d2:   lt
+10d3:   stop
+
+10d4:   invalid_a9
+
+10d5:   stop
+
+10d6:   selfbalance
+10d7:   extcodehash
+10d8:   selfdestruct
+
+10d9:   selfdestruct
+
+10da:   selfdestruct
+
+10db:   selfdestruct
+
+10dc:   selfdestruct
+
+10dd:   selfdestruct
+
+10de:   selfdestruct
+
+10df:   selfdestruct
+
+10e0:   selfdestruct
+
+10e1:   selfdestruct
+
+10e2:   selfdestruct
+
+10e3:   selfdestruct
+
+10e4:   selfdestruct
+
+10e5:   selfdestruct
+
+10e6:   selfdestruct
+
+10e7:   selfdestruct
+
+10e8:   selfdestruct
+
+10e9:   selfdestruct
+
+10ea:   selfdestruct
+
+10eb:   call
+10ec:   push9 0x1565b61100d8484610
+10f6:   invalid_d4
+
+10f7:   invalid_25
+
+10f8:   push6 0xb61101884838
+10ff:   calldatasize
+1100:   gt
+1101:   invalid_26
+
+1102:   invalid_25
+
+1103:   push6 0xb50505050565
+110a:   invalid_b6
+
+110b:   stop
+
+110c:   mod
+110d:   stop
+
+110e:   and
+110f:   stop
+
+1110:   addmod
+1111:   selfbalance
+1112:   extcodehash
+1113:   selfdestruct
+
+1114:   selfdestruct
+
+1115:   selfdestruct
+
+1116:   selfdestruct
+
+1117:   selfdestruct
+
+1118:   selfdestruct
+
+1119:   selfdestruct
+
+111a:   selfdestruct
+
+111b:   selfdestruct
+
+111c:   selfdestruct
+
+111d:   selfdestruct
+
+111e:   selfdestruct
+
+111f:   selfdestruct
+
+1120:   selfdestruct
+
+1121:   selfdestruct
+
+1122:   selfdestruct
+
+1123:   selfdestruct
+
+1124:   selfdestruct
+
+1125:   selfdestruct
+
+1126:   call
+1127:   push8 0x3fffffffffffffff
+1130:   selfdestruct
+
+1131:   selfdestruct
+
+1132:   selfdestruct
+
+1133:   selfdestruct
+
+1134:   selfdestruct
+
+1135:   selfdestruct
+
+1136:   selfdestruct
+
+1137:   selfdestruct
+
+1138:   selfdestruct
+
+1139:   selfdestruct
+
+113a:   selfdestruct
+
+113b:   selfdestruct
+
+113c:   call
+113d:   push9 0x152602001908152602
+1147:   stop
+
+1148:   and
+1149:   stop
+
+114a:   mul
+114b:   mod
+114c:   stop
+
+114d:   addmod
+114e:   calldatacopy
+114f:   extcodehash
+1150:   selfdestruct
+
+1151:   selfdestruct
+
+1152:   selfdestruct
+
+1153:   selfdestruct
+
+1154:   selfdestruct
+
+1155:   selfdestruct
+
+1156:   selfdestruct
+
+1157:   selfdestruct
+
+1158:   selfdestruct
+
+1159:   selfdestruct
+
+115a:   selfdestruct
+
+115b:   selfdestruct
+
+115c:   selfdestruct
+
+115d:   selfdestruct
+
+115e:   selfdestruct
+
+115f:   selfdestruct
+
+1160:   selfdestruct
+
+1161:   selfdestruct
+
+1162:   selfdestruct
+
+1163:   call
+1164:   push8 0x3fffffffffffffff
+116d:   selfdestruct
+
+116e:   selfdestruct
+
+116f:   selfdestruct
+
+1170:   selfdestruct
+
+1171:   selfdestruct
+
+1172:   selfdestruct
+
+1173:   selfdestruct
+
+1174:   selfdestruct
+
+1175:   selfdestruct
+
+1176:   selfdestruct
+
+1177:   selfdestruct
+
+1178:   selfdestruct
+
+1179:   call
+117a:   push9 0x152602001908152602
+1184:   stop
+
+1185:   and
+1186:   stop
+
+1187:   mul
+1188:   mod
+1189:   stop
+
+118a:   mulmod
+118b:   sdiv
+118c:   invalid_49
+
+118d:   mod
+118e:   lt
+118f:   lt
+1190:   stop
+
+1191:   invalid_a9
+
+1192:   stop
+
+1193:   chainid
+1194:   invalid_0f
+
+1195:   call
+1196:   push10 0x05092915050565b60008
+11a1:   smod
+11a2:   extcodehash
+11a3:   selfdestruct
+
+11a4:   selfdestruct
+
+11a5:   selfdestruct
+
+11a6:   selfdestruct
+
+11a7:   selfdestruct
+
+11a8:   selfdestruct
+
+11a9:   selfdestruct
+
+11aa:   selfdestruct
+
+11ab:   selfdestruct
+
+11ac:   selfdestruct
+
+11ad:   selfdestruct
+
+11ae:   selfdestruct
+
+11af:   selfdestruct
+
+11b0:   selfdestruct
+
+11b1:   selfdestruct
+
+11b2:   selfdestruct
+
+11b3:   selfdestruct
+
+11b4:   selfdestruct
+
+11b5:   selfdestruct
+
+11b6:   call
+11b7:   push7 0x00080848152602
+11bf:   stop
+
+11c0:   not
+11c1:   addmod
+11c2:   iszero
+11c3:   invalid_26
+
+11c4:   mul
+11c5:   stop
+
+11c6:   and
+11c7:   stop
+
+11c8:   mul
+11c9:   mod
+11ca:   stop
+
+11cb:   stop
+
+11cc:   and
+11cd:   stop
+
+11ce:   mulmod
+11cf:   sdiv
+11d0:   invalid_49
+
+11d1:   mod
+11d2:   lt
+11d3:   lt
+11d4:   stop
+
+11d5:   invalid_a9
+
+11d6:   stop
+
+11d7:   selfbalance
+11d8:   extcodehash
+11d9:   selfdestruct
+
+11da:   selfdestruct
+
+11db:   selfdestruct
+
+11dc:   selfdestruct
+
+11dd:   selfdestruct
+
+11de:   selfdestruct
+
+11df:   selfdestruct
+
+11e0:   selfdestruct
+
+11e1:   selfdestruct
+
+11e2:   selfdestruct
+
+11e3:   selfdestruct
+
+11e4:   selfdestruct
+
+11e5:   selfdestruct
+
+11e6:   selfdestruct
+
+11e7:   selfdestruct
+
+11e8:   selfdestruct
+
+11e9:   selfdestruct
+
+11ea:   selfdestruct
+
+11eb:   selfdestruct
+
+11ec:   call
+11ed:   push8 0x3fffffffffffffff
+11f6:   selfdestruct
+
+11f7:   selfdestruct
+
+11f8:   selfdestruct
+
+11f9:   selfdestruct
+
+11fa:   selfdestruct
+
+11fb:   selfdestruct
+
+11fc:   selfdestruct
+
+11fd:   selfdestruct
+
+11fe:   selfdestruct
+
+11ff:   selfdestruct
+
+1200:   selfdestruct
+
+1201:   selfdestruct
+
+1202:   call
+1203:   push2 0x4159
+1206:   sdiv
+1207:   mulmod
+1208:   not
+1209:   sdiv
+120a:   sdiv
+120b:   push6 0xb60008060008
+1212:   codesize
+1213:   iszero
+1214:   invalid_26
+
+1215:   mul
+1216:   stop
+
+1217:   not
+1218:   addmod
+1219:   iszero
+121a:   invalid_26
+
+121b:   mul
+121c:   stop
+
+121d:   and
+121e:   stop
+
+121f:   mul
+1220:   mod
+1221:   stop
+
+1222:   lt
+1223:   and
+1224:   stop
+
+1225:   mulmod
+1226:   sdiv
+1227:   invalid_49
+
+1228:   mod
+1229:   lt
+122a:   lt
+122b:   stop
+
+122c:   invalid_a9
+
+122d:   stop
+
+122e:   selfbalance
+122f:   extcodehash
+1230:   selfdestruct
+
+1231:   selfdestruct
+
+1232:   selfdestruct
+
+1233:   selfdestruct
+
+1234:   selfdestruct
+
+1235:   selfdestruct
+
+1236:   selfdestruct
+
+1237:   selfdestruct
+
+1238:   selfdestruct
+
+1239:   selfdestruct
+
+123a:   selfdestruct
+
+123b:   selfdestruct
+
+123c:   selfdestruct
+
+123d:   selfdestruct
+
+123e:   selfdestruct
+
+123f:   selfdestruct
+
+1240:   selfdestruct
+
+1241:   selfdestruct
+
+1242:   selfdestruct
+
+1243:   call
+1244:   push10 0x050919050565b6000806
+124f:   stop
+
+1250:   addmod
+1251:   addmod
+1252:   basefee
+1253:   iszero
+1254:   invalid_26
+
+1255:   mul
+1256:   stop
+
+1257:   not
+1258:   addmod
+1259:   iszero
+125a:   invalid_26
+
+125b:   mul
+125c:   stop
+
+125d:   and
+125e:   stop
+
+125f:   mul
+1260:   mod
+1261:   stop
+
+1262:   stop
+
+1263:   and
+1264:   stop
+
+1265:   mulmod
+1266:   sdiv
+1267:   invalid_49
+
+1268:   mod
+1269:   lt
+126a:   lt
+126b:   stop
+
+126c:   invalid_a9
+
+126d:   stop
+
+126e:   selfbalance
+126f:   extcodehash
+1270:   selfdestruct
+
+1271:   selfdestruct
+
+1272:   selfdestruct
+
+1273:   selfdestruct
+
+1274:   selfdestruct
+
+1275:   selfdestruct
+
+1276:   selfdestruct
+
+1277:   selfdestruct
+
+1278:   selfdestruct
+
+1279:   selfdestruct
+
+127a:   selfdestruct
+
+127b:   selfdestruct
+
+127c:   selfdestruct
+
+127d:   selfdestruct
+
+127e:   selfdestruct
+
+127f:   selfdestruct
+
+1280:   selfdestruct
+
+1281:   selfdestruct
+
+1282:   selfdestruct
+
+1283:   call
+1284:   push10 0x0503073fffffffffffff
+128f:   selfdestruct
+
+1290:   selfdestruct
+
+1291:   selfdestruct
+
+1292:   selfdestruct
+
+1293:   selfdestruct
+
+1294:   selfdestruct
+
+1295:   selfdestruct
+
+1296:   selfdestruct
+
+1297:   selfdestruct
+
+1298:   selfdestruct
+
+1299:   selfdestruct
+
+129a:   selfdestruct
+
+129b:   selfdestruct
+
+129c:   call
+129d:   push9 0x173fffffffffffffff
+12a7:   selfdestruct
+
+12a8:   selfdestruct
+
+12a9:   selfdestruct
+
+12aa:   selfdestruct
+
+12ab:   selfdestruct
+
+12ac:   selfdestruct
+
+12ad:   selfdestruct
+
+12ae:   selfdestruct
+
+12af:   selfdestruct
+
+12b0:   selfdestruct
+
+12b1:   selfdestruct
+
+12b2:   selfdestruct
+
+12b3:   call
+12b4:   push2 0x4156
+12b7:   gt
+12b8:   sar
+12b9:   dup6
+12ba:   push23 0x0009150506111dd565b809150505b919050565b6000819
+12d2:   sdiv
+12d3:   mod
+12d4:   stop
+
+12d5:   smod
+12d6:   extcodehash
+12d7:   selfdestruct
+
+12d8:   selfdestruct
+
+12d9:   selfdestruct
+
+12da:   selfdestruct
+
+12db:   selfdestruct
+
+12dc:   selfdestruct
+
+12dd:   selfdestruct
+
+12de:   selfdestruct
+
+12df:   selfdestruct
+
+12e0:   selfdestruct
+
+12e1:   selfdestruct
+
+12e2:   selfdestruct
+
+12e3:   selfdestruct
+
+12e4:   selfdestruct
+
+12e5:   selfdestruct
+
+12e6:   selfdestruct
+
+12e7:   selfdestruct
+
+12e8:   selfdestruct
+
+12e9:   selfdestruct
+
+12ea:   call
+12eb:   push9 0x173fffffffffffffff
+12f5:   selfdestruct
+
+12f6:   selfdestruct
+
+12f7:   selfdestruct
+
+12f8:   selfdestruct
+
+12f9:   selfdestruct
+
+12fa:   selfdestruct
+
+12fb:   selfdestruct
+
+12fc:   selfdestruct
+
+12fd:   selfdestruct
+
+12fe:   selfdestruct
+
+12ff:   selfdestruct
+
+1300:   selfdestruct
+
+1301:   call
+1302:   push2 0x4156
+1305:   gt
+1306:   invalid_22
+
+1307:   sdiv
+1308:   push20 0x090505b61122a8382611455565b505050565b600
+131d:   addmod
+131e:   mod
+131f:   stop
+
+1320:   addmod
+1321:   codesize
+1322:   iszero
+1323:   invalid_26
+
+1324:   mul
+1325:   stop
+
+1326:   not
+1327:   addmod
+1328:   iszero
+1329:   invalid_26
+
+132a:   mul
+132b:   stop
+
+132c:   and
+132d:   stop
+
+132e:   mul
+132f:   mod
+1330:   stop
+
+1331:   lt
+1332:   and
+1333:   add
+1334:   invalid_49
+
+1335:   sdiv
+1336:   invalid_49
+
+1337:   mod
+1338:   lt
+1339:   lt
+133a:   stop
+
+133b:   invalid_a9
+
+133c:   stop
+
+133d:   chainid
+133e:   push32 0xfffffffffffffff169050919050565b600080848152602001908152602001600
+135f:   mul
+1360:   mod
+1361:   stop
+
+1362:   lt
+1363:   and
+1364:   stop
+
+1365:   mulmod
+1366:   sdiv
+1367:   invalid_49
+
+1368:   mod
+1369:   lt
+136a:   lt
+136b:   stop
+
+136c:   invalid_a9
+
+136d:   stop
+
+136e:   selfbalance
+136f:   extcodehash
+1370:   selfdestruct
+
+1371:   selfdestruct
+
+1372:   selfdestruct
+
+1373:   selfdestruct
+
+1374:   selfdestruct
+
+1375:   selfdestruct
+
+1376:   selfdestruct
+
+1377:   selfdestruct
+
+1378:   selfdestruct
+
+1379:   selfdestruct
+
+137a:   selfdestruct
+
+137b:   selfdestruct
+
+137c:   selfdestruct
+
+137d:   selfdestruct
+
+137e:   selfdestruct
+
+137f:   selfdestruct
+
+1380:   selfdestruct
+
+1381:   selfdestruct
+
+1382:   selfdestruct
+
+1383:   call
+1384:   push8 0x3fffffffffffffff
+138d:   selfdestruct
+
+138e:   selfdestruct
+
+138f:   selfdestruct
+
+1390:   selfdestruct
+
+1391:   selfdestruct
+
+1392:   selfdestruct
+
+1393:   selfdestruct
+
+1394:   selfdestruct
+
+1395:   selfdestruct
+
+1396:   selfdestruct
+
+1397:   selfdestruct
+
+1398:   selfdestruct
+
+1399:   call
+139a:   push9 0x273fffffffffffffff
+13a4:   selfdestruct
+
+13a5:   selfdestruct
+
+13a6:   selfdestruct
+
+13a7:   selfdestruct
+
+13a8:   selfdestruct
+
+13a9:   selfdestruct
+
+13aa:   selfdestruct
+
+13ab:   selfdestruct
+
+13ac:   selfdestruct
+
+13ad:   selfdestruct
+
+13ae:   selfdestruct
+
+13af:   selfdestruct
+
+13b0:   call
+13b1:   push2 0x4611
+13b4:   codesize
+13b5:   calldataload
+13b6:   push25 0x16000808581526020019081526020016000206001016000610
+13d0:   lt
+13d1:   stop
+
+13d2:   invalid_a8
+
+13d3:   iszero
+13d4:   basefee
+13d5:   or
+13d6:   extcodehash
+13d7:   selfdestruct
+
+13d8:   selfdestruct
+
+13d9:   selfdestruct
+
+13da:   selfdestruct
+
+13db:   selfdestruct
+
+13dc:   selfdestruct
+
+13dd:   selfdestruct
+
+13de:   selfdestruct
+
+13df:   selfdestruct
+
+13e0:   selfdestruct
+
+13e1:   selfdestruct
+
+13e2:   selfdestruct
+
+13e3:   selfdestruct
+
+13e4:   selfdestruct
+
+13e5:   selfdestruct
+
+13e6:   selfdestruct
+
+13e7:   selfdestruct
+
+13e8:   selfdestruct
+
+13e9:   selfdestruct
+
+13ea:   create
+13eb:   invalid_21
+
+13ec:   swap2
+13ed:   push10 0x08373fffffffffffffff
+13f8:   selfdestruct
+
+13f9:   selfdestruct
+
+13fa:   selfdestruct
+
+13fb:   selfdestruct
+
+13fc:   selfdestruct
+
+13fd:   selfdestruct
+
+13fe:   selfdestruct
+
+13ff:   selfdestruct
+
+1400:   selfdestruct
+
+1401:   selfdestruct
+
+1402:   selfdestruct
+
+1403:   selfdestruct
+
+1404:   call
+1405:   push1 0x21
+1407:   push26 0x05550827f335721b01866dc23fbee8b6b2c7b1e14d6f05c28cd3
+1422:   gas
+1423:   invalid_2c
+
+1424:   swap4
+1425:   timestamp
+1426:   codecopy
+1427:   invalid_f9
+
+1428:   blockhash
+1429:   swap6
+142a:   push1 0x2a
+142c:   addmod
+142d:   calldatasize
+142e:   div
+142f:   sdiv
+1430:   xor
+1431:   addmod
+1432:   invalid_27
+
+1433:   extcodehash
+1434:   selfdestruct
+
+1435:   selfdestruct
+
+1436:   selfdestruct
+
+1437:   selfdestruct
+
+1438:   selfdestruct
+
+1439:   selfdestruct
+
+143a:   selfdestruct
+
+143b:   selfdestruct
+
+143c:   selfdestruct
+
+143d:   selfdestruct
+
+143e:   selfdestruct
+
+143f:   selfdestruct
+
+1440:   selfdestruct
+
+1441:   selfdestruct
+
+1442:   selfdestruct
+
+1443:   selfdestruct
+
+1444:   selfdestruct
+
+1445:   selfdestruct
+
+1446:   selfdestruct
+
+1447:   call
+1448:   push8 0x3fffffffffffffff
+1451:   selfdestruct
+
+1452:   selfdestruct
+
+1453:   selfdestruct
+
+1454:   selfdestruct
+
+1455:   selfdestruct
+
+1456:   selfdestruct
+
+1457:   selfdestruct
+
+1458:   selfdestruct
+
+1459:   selfdestruct
+
+145a:   selfdestruct
+
+145b:   selfdestruct
+
+145c:   selfdestruct
+
+145d:   call
+145e:   push9 0x152602001915050604
+1468:   sdiv
+1469:   xor
+146a:   mulmod
+146b:   lt
+146c:   codecopy
+146d:   exp
+146e:   invalid_25
+
+146f:   invalid_b6
+
+1470:   stop
+
+1471:   addmod
+1472:   addmod
+1473:   basefee
+1474:   iszero
+1475:   invalid_26
+
+1476:   mul
+1477:   stop
+
+1478:   not
+1479:   addmod
+147a:   iszero
+147b:   invalid_26
+
+147c:   mul
+147d:   stop
+
+147e:   and
+147f:   stop
+
+1480:   mul
+1481:   mod
+1482:   stop
+
+1483:   lt
+1484:   and
+1485:   add
+1486:   invalid_49
+
+1487:   sdiv
+1488:   invalid_49
+
+1489:   mod
+148a:   lt
+148b:   lt
+148c:   stop
+
+148d:   invalid_a9
+
+148e:   stop
+
+148f:   chainid
+1490:   push32 0xfffffffffffffff1667ffffffffffffffff168167ffffffffffffffff1614611
+14b1:   gaslimit
+14b2:   sdiv
+14b3:   push25 0x06000808581526020019081526020016000206001016014610
+14cd:   lt
+14ce:   stop
+
+14cf:   invalid_a8
+
+14d0:   iszero
+14d1:   basefee
+14d2:   and
+14d3:   push32 0xfffffffffffffff021916908367ffffffffffffffff160217905550827f1d4f9
+14f4:   invalid_bb
+
+14f5:   invalid_fc
+
+14f6:   swap13
+14f7:   invalid_ab
+
+14f8:   dup10
+14f9:   invalid_d6
+
+14fa:   push15 0x1a1562f2233ccbf1308cb4f63de2ea
+150a:   invalid_d5
+
+150b:   push25 0x7adddb8fa6882604051808267ffffffffffffffff1667fffff
+1525:   selfdestruct
+
+1526:   selfdestruct
+
+1527:   selfdestruct
+
+1528:   selfdestruct
+
+1529:   selfdestruct
+
+152a:   call
+152b:   push9 0x152602001915050604
+1535:   sdiv
+1536:   xor
+1537:   mulmod
+1538:   lt
+1539:   codecopy
+153a:   exp
+153b:   invalid_25
+
+153c:   invalid_b5
+
+153d:   sdiv
+153e:   sdiv
+153f:   sdiv
+1540:   push6 0xb80600080848
+1547:   iszero
+1548:   invalid_26
+
+1549:   mul
+154a:   stop
+
+154b:   not
+154c:   addmod
+154d:   iszero
+154e:   invalid_26
+
+154f:   mul
+1550:   stop
+
+1551:   and
+1552:   stop
+
+1553:   mul
+1554:   mod
+1555:   stop
+
+1556:   stop
+
+1557:   and
+1558:   stop
+
+1559:   mod
+155a:   lt
+155b:   lt
+155c:   stop
+
+155d:   invalid_a8
+
+155e:   iszero
+155f:   basefee
+1560:   or
+1561:   extcodehash
+1562:   selfdestruct
+
+1563:   selfdestruct
+
+1564:   selfdestruct
+
+1565:   selfdestruct
+
+1566:   selfdestruct
+
+1567:   selfdestruct
+
+1568:   selfdestruct
+
+1569:   selfdestruct
+
+156a:   selfdestruct
+
+156b:   selfdestruct
+
+156c:   selfdestruct
+
+156d:   selfdestruct
+
+156e:   selfdestruct
+
+156f:   selfdestruct
+
+1570:   selfdestruct
+
+1571:   selfdestruct
+
+1572:   selfdestruct
+
+1573:   selfdestruct
+
+1574:   selfdestruct
+
+1575:   create
+1576:   invalid_21
+
+1577:   swap2
+1578:   push10 0x08373fffffffffffffff
+1583:   selfdestruct
+
+1584:   selfdestruct
+
+1585:   selfdestruct
+
+1586:   selfdestruct
+
+1587:   selfdestruct
+
+1588:   selfdestruct
+
+1589:   selfdestruct
+
+158a:   selfdestruct
+
+158b:   selfdestruct
+
+158c:   selfdestruct
+
+158d:   selfdestruct
+
+158e:   selfdestruct
+
+158f:   call
+1590:   push1 0x21
+1592:   push26 0x05550505056fea265627a7a72315820e307c1741e952c90d504a
+15ad:   invalid_e3
+
+15ae:   sub
+15af:   staticcall
+15b0:   extcodehash
+15b1:   log1
+15b2:   invalid_e5
+
+15b3:   invalid_f6
+
+15b4:   invalid_26
+
+15b5:   mstore
+15b6:   stop
+
+15b7:   invalid_c6
+
+15b8:   mstore8
+15b9:   div
+15ba:   invalid_d9
+
+15bb:   exp
+15bc:   invalid_ba
+
+15bd:   invalid_a9
+
+15be:   mulmod
+15bf:   invalid_d2
+
+15c0:   invalid_de
+
+15c1:   invalid_e4
+
+15c2:   invalid_b6
+
+15c3:   selfbalance
+15c4:   calldatasize
+15c5:   invalid_f6
+
+15c6:   invalid_c6
+
+15c7:   callvalue
+15c8:   address
+15c9:   stop
+
+15ca:   mload
+15cb:   stop
+
+15cc:   sub
+15cd:   keccak256
+15ce:   stop
+
+15cf:   stop
+
+15d0:   stop
+
+15d1:   stop
+
+15d2:   stop
+
+15d3:   stop
+
+15d4:   stop
+
+15d5:   stop
+
+15d6:   stop
+
+15d7:   stop
+
+15d8:   stop
+
+15d9:   sub
+15da:   eq
+15db:   iszero
+15dc:   swap3
+15dd:   push6 0xdd8dbb310642
+15e4:   invalid_f9
+
+15e5:   dup16
+15e6:   pop
+15e7:   invalid_c0
+
